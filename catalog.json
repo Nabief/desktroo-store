@@ -1,8 +1,52 @@
 {
   "schema": 1,
-  "published": "2026-10-15T13:29:50Z",
+  "published": "2026-10-15T14:03:07Z",
   "min_desktroo": "2.46.0",
   "apps": [
+    {
+      "id": "authenticator",
+      "channel": "test",
+      "name": {
+        "fr": "Authenticator",
+        "en": "Authenticator"
+      },
+      "tagline": {
+        "fr": "Vos codes de double authentification, sur votre NAS",
+        "en": "Your 2FA codes, on your NAS"
+      },
+      "description": {
+        "fr": "Générez les codes à 6 chiffres de vos comptes protégés par double authentification. Le coffre est chiffré dans votre navigateur par votre mot de passe maître : même votre NAS ne voit pas vos codes. Un coffre par utilisateur, verrouillage automatique après 10 minutes.",
+        "en": "Generate the 6-digit codes of your two-factor accounts. The vault is encrypted in your browser with your master password."
+      },
+      "category": "securite",
+      "version": "1.0.0",
+      "min_desktroo": "2.45.1",
+      "image": "ghcr.io/nabief/desktroo-authenticator",
+      "digest": "sha256:73e8cc42ec80351d7d82b6793741bffb70f50931e4bc25867a892d43602d713c",
+      "port": 8080,
+      "health": "/healthz",
+      "sso": "header",
+      "run_as": "568:568",
+      "env": {
+        "TZ": "@host"
+      },
+      "volumes": [
+        {
+          "name": "data",
+          "mount": "/data"
+        }
+      ],
+      "resources": {
+        "memory_mb": 128,
+        "cpus": 0.5
+      },
+      "window": {
+        "width": 820,
+        "height": 640
+      },
+      "icon": "icons/authenticator.svg",
+      "standalone": true
+    },
     {
       "id": "hello",
       "channel": "test",
@@ -49,7 +93,8 @@
         "width": 640,
         "height": 420
       },
-      "icon": "icons/hello.svg"
+      "icon": "icons/hello.svg",
+      "standalone": true
     }
   ]
 }
