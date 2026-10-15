@@ -1,11 +1,11 @@
-# Desktroo — catalogue du Magasin
+# Desktroo Apps — catalogue
 
-Catalogue des apps du Magasin de [Desktroo](https://desktroo.fr), le bureau web pour TrueNAS.
+Catalogue de Desktroo Apps, les apps de [Desktroo](https://desktroo.fr), le bureau web pour TrueNAS.
 Seules les apps Mdm-services.fr y figurent ; elles sont comprises dans l'abonnement Desktroo.
 
 - `catalog.json` : la liste des apps, lue par Desktroo.
 - `catalog.json.sig` : sa signature. Desktroo refuse un catalogue non signé, modifié ou plus ancien que le sien.
-- `icons/`, `screens/`, `RELEASES/` : visuels et nouveautés affichés dans le Magasin.
+- `icons/`, `screens/`, `RELEASES/` : visuels et nouveautés affichés dans Desktroo Apps.
 
 Ne pas modifier ces fichiers à la main sur GitHub : ils sont publiés par `publish-store.ps1`.
 

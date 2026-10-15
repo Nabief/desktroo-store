@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-15T14:16:04Z",
+  "published": "2026-10-15T14:29:51Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -19,10 +19,10 @@
         "en": "Generate the 6-digit codes of your two-factor accounts. The vault is encrypted in your browser with your master password."
       },
       "category": "securite",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "min_desktroo": "2.45.1",
       "image": "ghcr.io/nabief/desktroo-authenticator",
-      "digest": "sha256:9766d152dd3d88287f33daa50703838e79e7878bd6aa934fae346aea37101a84",
+      "digest": "sha256:ec274179b446408f3fdf3b342cc2818b60d7bd960dadea8e7aa2e9bff59bbab8",
       "port": 8080,
       "health": "/healthz",
       "sso": "header",
@@ -55,8 +55,8 @@
         "en": "Hello"
       },
       "tagline": {
-        "fr": "App de test du Magasin : connexion, thème et kit",
-        "en": "Store test app: sign-in, theme and kit"
+        "fr": "App de test de Desktroo Apps : connexion, thème et kit",
+        "en": "Desktroo Apps test app: sign-in, theme and kit"
       },
       "description": {
         "fr": "Affiche l'utilisateur transmis par Desktroo, vérifie le secret de l'app et suit le thème du bureau. Visible seulement sur les NAS de test.",
