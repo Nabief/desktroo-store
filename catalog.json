@@ -1,11 +1,10 @@
 {
   "schema": 1,
-  "published": "2026-10-15T19:02:40Z",
+  "published": "2026-10-15T19:18:39Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
       "id": "authenticator",
-      "channel": "test",
       "name": {
         "fr": "Authenticator",
         "en": "Authenticator"
@@ -20,7 +19,7 @@
       },
       "category": "securite",
       "version": "1.0.3",
-      "min_desktroo": "2.45.1",
+      "min_desktroo": "2.46.0",
       "image": "ghcr.io/nabief/desktroo-authenticator",
       "digest": "sha256:979cf781a35c7fb9ac9b8c1d8bbe34afc49d640ad0fe2075bfa90b9564b9e98a",
       "port": 8080,
@@ -127,7 +126,6 @@
     {
       "id": "npmplus",
       "kind": "module",
-      "channel": "test",
       "name": {
         "fr": "NPMplus",
         "en": "NPMplus"
