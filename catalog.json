@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-15T16:53:13Z",
+  "published": "2026-10-15T16:56:14Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -145,7 +145,7 @@
       "version": "1.0.0",
       "min_desktroo": "2.46.0",
       "images": {
-        "npmplus": "docker.io/zoeyvid/npmplus:2026-07-24-r1"
+        "npmplus": "docker.io/zoeyvid/npmplus:2026-07-24-r1@sha256:f7f6ca26082036ee6387a7da336267fe61f16b1eb8087dd964237238b59479ef"
       },
       "license": {
         "name": "NPMplus",
