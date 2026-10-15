@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-15T16:19:15Z",
+  "published": "2026-10-15T16:53:13Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -124,6 +124,34 @@
         "mariadb": "mariadb:11"
       },
       "icon": "icons/webserver.svg"
+    },
+    {
+      "id": "npmplus",
+      "kind": "module",
+      "channel": "test",
+      "name": {
+        "fr": "NPMplus",
+        "en": "NPMplus"
+      },
+      "tagline": {
+        "fr": "Vos sites en https, avec vos propres domaines",
+        "en": "Your sites over https, with your own domains"
+      },
+      "description": {
+        "fr": "Reverse-proxy NPMplus (logiciel libre) : il publie vos sites et vos apps sous vos noms de domaine, en https, avec des certificats Let's Encrypt renouvelés tout seuls. Installé et mis à jour par Desktroo. Il écoute sur 8090 et 8453 pour laisser 80 et 443 à TrueNAS. Désinstallé, ses certificats et réglages restent sur le NAS.",
+        "en": "NPMplus reverse proxy (free software): publishes your sites and apps under your own domains, over https, with auto-renewed Let's Encrypt certificates. Listens on 8090 and 8453, leaving 80 and 443 to TrueNAS."
+      },
+      "category": "reseau",
+      "version": "1.0.0",
+      "min_desktroo": "2.46.0",
+      "images": {
+        "npmplus": "docker.io/zoeyvid/npmplus:2026-07-24-r1"
+      },
+      "license": {
+        "name": "NPMplus",
+        "url": "https://github.com/ZoeyVid/NPMplus"
+      },
+      "icon": "icons/npmplus.svg"
     }
   ]
 }
