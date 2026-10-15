@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-15T14:30:50Z",
+  "published": "2026-10-15T14:39:48Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -19,10 +19,10 @@
         "en": "Generate the 6-digit codes of your two-factor accounts. The vault is encrypted in your browser with your master password."
       },
       "category": "securite",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "min_desktroo": "2.45.1",
       "image": "ghcr.io/nabief/desktroo-authenticator",
-      "digest": "sha256:ec274179b446408f3fdf3b342cc2818b60d7bd960dadea8e7aa2e9bff59bbab8",
+      "digest": "sha256:979cf781a35c7fb9ac9b8c1d8bbe34afc49d640ad0fe2075bfa90b9564b9e98a",
       "port": 8080,
       "health": "/healthz",
       "sso": "header",
