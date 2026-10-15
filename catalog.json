@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-15T20:05:18Z",
+  "published": "2026-10-15T20:21:54Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -149,6 +149,34 @@
         "url": "https://github.com/ZoeyVid/NPMplus"
       },
       "icon": "icons/npmplus.svg"
+    },
+    {
+      "id": "pass",
+      "kind": "module",
+      "channel": "test",
+      "name": {
+        "fr": "Desktroo Pass",
+        "en": "Desktroo Pass"
+      },
+      "tagline": {
+        "fr": "Vos mots de passe sur votre NAS, avec les applis Bitwarden",
+        "en": "Your passwords on your NAS, with the Bitwarden apps"
+      },
+      "description": {
+        "fr": "Un coffre de mots de passe pour toute la famille ou l'équipe, hébergé sur votre NAS. Il fonctionne avec les applis Bitwarden officielles et gratuites : remplissage automatique dans le navigateur, sur le téléphone et sur le PC. Chaque personne a son coffre, chiffré avec son propre mot de passe maître ; les comptes s'ouvrent sur invitation. Publié en https sous votre domaine grâce à NPMplus. Basé sur Vaultwarden (logiciel libre, AGPL-3.0), compatible Bitwarden ; non édité par Bitwarden, Inc.",
+        "en": "A password vault for the whole family or team, hosted on your NAS. Works with the official, free Bitwarden apps: autofill in the browser, on the phone and on the PC. Everyone has their own vault, encrypted with their own master password; accounts open by invitation. Published over https under your domain through NPMplus. Built on Vaultwarden (free software, AGPL-3.0), Bitwarden-compatible; not published by Bitwarden, Inc."
+      },
+      "category": "securite",
+      "version": "1.0.0",
+      "min_desktroo": "2.47.0",
+      "images": {
+        "vaultwarden": "docker.io/vaultwarden/server:1.37.3"
+      },
+      "license": {
+        "name": "Vaultwarden (AGPL-3.0)",
+        "url": "https://github.com/dani-garcia/vaultwarden"
+      },
+      "icon": "icons/pass.svg"
     }
   ]
 }
