@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-15T14:39:48Z",
+  "published": "2026-10-15T16:11:51Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -95,6 +95,35 @@
       },
       "icon": "icons/hello.svg",
       "standalone": true
+    },
+    {
+      "id": "webserver",
+      "kind": "module",
+      "channel": "test",
+      "name": {
+        "fr": "Serveur web",
+        "en": "Web server"
+      },
+      "tagline": {
+        "fr": "Hébergez vos sites sur le NAS : PHP et MariaDB",
+        "en": "Host your websites on the NAS: PHP and MariaDB"
+      },
+      "description": {
+        "fr": "Le serveur web de Desktroo : vos sites (WordPress, Nextcloud, PrestaShop…), PHP 8.3, 8.2, 8.1 et 7.4, et MariaDB pour les bases de données. Il ajoute la fenêtre « Sites Web » au bureau. Désinstallé, il n'occupe rien ; vos sites et vos bases restent sur le NAS.",
+        "en": "Desktroo's web server: your websites, PHP 8.3 to 7.4 and MariaDB. Adds the Websites window."
+      },
+      "category": "hebergement",
+      "version": "1.0.0",
+      "min_desktroo": "2.45.1",
+      "images": {
+        "nginx": "nginx:alpine",
+        "php83": "php:8.3-fpm-alpine",
+        "php82": "php:8.2-fpm-alpine",
+        "php81": "php:8.1-fpm-alpine",
+        "php74": "php:7.4-fpm-alpine",
+        "mariadb": "mariadb:11"
+      },
+      "icon": "icons/webserver.svg"
     }
   ]
 }
