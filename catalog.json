@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T14:48:20Z",
+  "published": "2026-10-16T15:20:41Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -395,7 +395,7 @@
       },
       "category": "supervision",
       "channel": "test",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "min_desktroo": "2.54.12",
       "image": "docker.io/louislam/uptime-kuma",
       "tag": "2.5.0",
@@ -423,8 +423,8 @@
         "en": "It opens port 3001 on your local network only: that is the address of its interface. It is never opened to the Internet."
       },
       "setup_note": {
-        "fr": "À la première ouverture, http://{ip}:3001, créez votre compte administrateur et choisissez la base « SQLite » (la plus simple). Ne redirigez pas le port 3001 sur votre box : si vous voulez le joindre de l'extérieur, passez par le VPN ou par un domaine protégé.",
-        "en": "On first opening, http://{ip}:3001, create your administrator account and choose the “SQLite” database (the simplest). Do not forward port 3001 on your router: to reach it from outside, use the VPN or a protected domain."
+        "fr": "À la première ouverture, http://{ip}:3001, créez votre compte administrateur (la base de données est déjà réglée). Ne redirigez pas le port 3001 sur votre box : si vous voulez le joindre de l'extérieur, passez par le VPN ou par un domaine protégé.",
+        "en": "On first opening, http://{ip}:3001, create your administrator account (the database is already set up). Do not forward port 3001 on your router: to reach it from outside, use the VPN or a protected domain."
       },
       "license": {
         "name": "Uptime Kuma (MIT)",
@@ -432,12 +432,20 @@
       },
       "env": {
         "TZ": "@host",
-        "UPTIME_KUMA_PORT": "8080"
+        "UPTIME_KUMA_PORT": "8080",
+        "UPTIME_KUMA_DB_TYPE": "sqlite"
       },
       "volumes": [
         {
           "name": "data",
           "mount": "/app/data"
+        }
+      ],
+      "seed": [
+        {
+          "volume": "data",
+          "path": "db-config.json",
+          "content": "{\"type\":\"sqlite\"}"
         }
       ],
       "resources": {
