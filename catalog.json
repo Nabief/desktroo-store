@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T04:51:28Z",
+  "published": "2026-10-16T04:58:57Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -145,7 +145,6 @@
       "category": "securite",
       "version": "1.0.1",
       "min_desktroo": "2.48.0",
-      "channel": "test",
       "image": "ghcr.io/nabief/desktroo-antivirus",
       "digest": "sha256:fbc1b34b5778a41268dd2bc7c68f0a1dba53ee6b49869724d4d7b6c9cb866ae2",
       "port": 8080,
