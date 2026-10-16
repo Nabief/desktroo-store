@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T15:20:41Z",
+  "published": "2026-10-16T15:41:00Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -395,11 +395,11 @@
       },
       "category": "supervision",
       "channel": "test",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "min_desktroo": "2.54.12",
       "image": "docker.io/louislam/uptime-kuma",
-      "tag": "2.5.0",
-      "digest": "sha256:a8610b3b4c38077922ba51b036691e06887d7cefd91fe620fd3d6d23d03dc240",
+      "tag": "2.5.6",
+      "digest": "sha256:9912da7d7d9b6ddc0c2d904beb84d24689c1ed9c33b81419eb9008663a92a329",
       "port": 8080,
       "health": "/",
       "sso": "header",
