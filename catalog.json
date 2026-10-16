@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T15:53:46Z",
+  "published": "2026-10-16T16:15:07Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -457,6 +457,90 @@
       },
       "icon": "icons/uptime-kuma.svg",
       "standalone": false
+    },
+    {
+      "id": "photoprism",
+      "name": {
+        "fr": "PhotoPrism",
+        "en": "PhotoPrism"
+      },
+      "tagline": {
+        "fr": "Vos photos classées et cherchables, sans le cloud",
+        "en": "Your photos sorted and searchable, no cloud"
+      },
+      "description": {
+        "fr": "Une photothèque pour parcourir vos photos et vidéos du NAS comme sur un téléphone : albums, carte, recherche par lieu, date, couleur ou contenu, reconnaissance des visages.\n\nIl lit vos dossiers existants en lecture seule : vos originaux ne sont jamais modifiés ni déplacés. Tout le classement reste sur votre NAS, rien n'est envoyé à l'extérieur.\n\nMoteur PhotoPrism (AGPL-3.0), image officielle non modifiée. Le premier indexage peut durer plusieurs heures si la photothèque est grande.",
+        "en": "A photo library to browse your NAS photos and videos like on a phone: albums, map, search by place, date, colour or content, face recognition.\n\nIt reads your existing folders read-only: your originals are never modified or moved. All the sorting stays on your NAS, nothing is sent outside.\n\nPhotoPrism engine (AGPL-3.0), unmodified official image. The first indexing can take several hours for a large library."
+      },
+      "category": "photos",
+      "channel": "test",
+      "version": "1.0.0",
+      "min_desktroo": "2.54.12",
+      "image": "docker.io/photoprism/photoprism",
+      "tag": "261007",
+      "digest": "sha256:0f85369636ad99ca9a1c33f2d04df6c590802d16b7c33b4a1ea026b595be06d1",
+      "port": 8080,
+      "health": "/api/v1/status",
+      "sso": "header",
+      "run_as": "0:0",
+      "read_only": false,
+      "nas_access": {
+        "mode": "ro",
+        "why": {
+          "fr": "Il lit les dossiers de photos que vous choisissez, en lecture seule : vos originaux ne sont jamais modifiés.",
+          "en": "It reads the photo folders you choose, read-only: your originals are never modified."
+        }
+      },
+      "credentials": {
+        "user": "admin",
+        "derive": "photoprism"
+      },
+      "host_ports": [
+        {
+          "port": 2342,
+          "to": 8080,
+          "proto": "tcp",
+          "bind": "lan",
+          "label": {
+            "fr": "Interface (réseau local)",
+            "en": "Interface (local network)"
+          }
+        }
+      ],
+      "open_url": "http://{ip}:2342",
+      "setup_note": {
+        "fr": "Ouvrez http://{ip}:2342 et connectez-vous avec l'identifiant et le mot de passe affichés sur cette fiche. L'indexage de vos photos démarre depuis le menu Bibliothèque > Indexage ; il peut prendre du temps et utiliser beaucoup le processeur la première fois.\n\nLe mot de passe affiché n'est valable que tant que vous ne l'avez pas changé dans PhotoPrism. Ne redirigez pas le port 2342 sur votre box : pour y accéder de l'extérieur, passez par le VPN.",
+        "en": "Open http://{ip}:2342 and sign in with the username and password shown on this page. Indexing starts from Library > Index; the first run can take a while and use a lot of CPU.\n\nThe displayed password is only valid until you change it in PhotoPrism. Do not forward port 2342 on your router: to reach it from outside, use the VPN."
+      },
+      "license": {
+        "name": "PhotoPrism (AGPL-3.0)",
+        "url": "https://github.com/photoprism/photoprism"
+      },
+      "env": {
+        "TZ": "@host",
+        "PHOTOPRISM_HTTP_PORT": "8080",
+        "PHOTOPRISM_ADMIN_USER": "admin",
+        "PHOTOPRISM_ADMIN_PASSWORD": "@derive:photoprism",
+        "PHOTOPRISM_AUTH_MODE": "password",
+        "PHOTOPRISM_DATABASE_DRIVER": "sqlite",
+        "PHOTOPRISM_ORIGINALS_PATH": "/nas",
+        "PHOTOPRISM_STORAGE_PATH": "/photoprism/storage",
+        "PHOTOPRISM_READONLY": "true",
+        "PHOTOPRISM_DISABLE_TLS": "true",
+        "PHOTOPRISM_SITE_URL": "http://localhost:8080/",
+        "PHOTOPRISM_LOG_LEVEL": "info"
+      },
+      "volumes": [
+        {
+          "name": "storage",
+          "mount": "/photoprism/storage"
+        }
+      ],
+      "resources": {
+        "memory_mb": 4096,
+        "cpus": 2
+      },
+      "icon": "icons/photoprism.svg"
     }
   ]
 }
