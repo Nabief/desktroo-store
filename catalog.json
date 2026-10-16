@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T07:32:47Z",
+  "published": "2026-10-16T07:51:58Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -256,6 +256,116 @@
         "height": 700
       },
       "icon": "icons/adguard.svg",
+      "standalone": true
+    },
+    {
+      "id": "wireguard",
+      "name": {
+        "fr": "VPN (WireGuard)",
+        "en": "VPN (WireGuard)"
+      },
+      "tagline": {
+        "fr": "Rejoignez votre réseau depuis l'extérieur, en sécurité",
+        "en": "Reach your network from anywhere, securely"
+      },
+      "description": {
+        "fr": "Un VPN personnel : depuis votre téléphone ou votre ordinateur, où que vous soyez, vous retrouvez votre NAS et votre réseau comme si vous étiez à la maison. Chaque appareil a sa propre clé, qu'on active ou retire à tout moment ; l'ajout se fait en scannant un QR code. Moteur wg-easy (AGPL-3.0), image officielle non modifiée, avec le protocole WireGuard. WireGuard® est une marque déposée de Jason A. Donenfeld ; Desktroo n'est ni affilié ni soutenu par le projet WireGuard.",
+        "en": "A personal VPN: from your phone or computer, wherever you are, you reach your NAS and your network as if you were at home. Each device has its own key, which you can enable or remove at any time; adding one is a QR code scan. wg-easy engine (AGPL-3.0), unmodified official image, using the WireGuard protocol. WireGuard® is a registered trademark of Jason A. Donenfeld; Desktroo is not affiliated with or endorsed by the WireGuard project."
+      },
+      "category": "reseau",
+      "channel": "test",
+      "version": "1.0.0",
+      "min_desktroo": "2.53.0",
+      "image": "ghcr.io/wg-easy/wg-easy",
+      "tag": "15",
+      "digest": "sha256:0e7bc9d34e86ddcaa92bc700d4d7dc9b33291dbc07ac8d13382f7c2095f949ec",
+      "port": 8080,
+      "health": "/",
+      "sso": "header",
+      "run_as": "0:0",
+      "read_only": false,
+      "cap_add": [
+        "NET_ADMIN",
+        "SYS_MODULE"
+      ],
+      "sysctls": {
+        "net.ipv4.ip_forward": "1",
+        "net.ipv4.conf.all.src_valid_mark": "1",
+        "net.ipv6.conf.all.disable_ipv6": "0",
+        "net.ipv6.conf.all.forwarding": "1",
+        "net.ipv6.conf.default.forwarding": "1"
+      },
+      "host_mounts": [
+        "/lib/modules"
+      ],
+      "host_ports": [
+        {
+          "port": 51820,
+          "proto": "udp",
+          "bind": "all",
+          "label": {
+            "fr": "VPN WireGuard",
+            "en": "WireGuard VPN"
+          }
+        }
+      ],
+      "network_why": {
+        "fr": "Il ouvre le port 51820 (UDP) : c'est par lui que vos appareils se connectent de l'extérieur. Il demande aussi des droits réseau étendus (créer l'interface VPN et transférer le trafic), que l'app n'utilise que pour cela.",
+        "en": "It opens port 51820 (UDP): that is how your devices connect from outside. It also needs extended network rights (to create the VPN interface and forward traffic), which it uses for nothing else."
+      },
+      "setup_note": {
+        "fr": "Dans votre box, redirigez le port 51820 en UDP vers ce NAS ({ip}). Ajoutez ensuite un appareil et scannez son QR code avec l'application WireGuard de votre téléphone.",
+        "en": "In your router, forward UDP port 51820 to this NAS ({ip}). Then add a device and scan its QR code with the WireGuard app on your phone."
+      },
+      "install_fields": [
+        {
+          "key": "public_host",
+          "env": "INIT_HOST",
+          "kind": "host",
+          "required": true,
+          "label": {
+            "fr": "Adresse publique de votre box",
+            "en": "Public address of your router"
+          },
+          "placeholder": "vpn.mondomaine.fr",
+          "help": {
+            "fr": "Le nom de domaine (ou l'adresse IP) que vos appareils utiliseront pour joindre votre box depuis l'extérieur. Il est inscrit dans la configuration de chaque appareil.",
+            "en": "The domain name (or IP address) your devices will use to reach your router from outside. It is written into each device's configuration."
+          }
+        }
+      ],
+      "credentials": {
+        "user": "admin",
+        "derive": "wg-admin"
+      },
+      "license": {
+        "name": "wg-easy (AGPL-3.0)",
+        "url": "https://github.com/wg-easy/wg-easy"
+      },
+      "env": {
+        "TZ": "@host",
+        "PORT": "8080",
+        "INSECURE": "true",
+        "INIT_ENABLED": "true",
+        "INIT_USERNAME": "admin",
+        "INIT_PASSWORD": "@derive:wg-admin",
+        "INIT_PORT": "51820"
+      },
+      "volumes": [
+        {
+          "name": "etc",
+          "mount": "/etc/wireguard"
+        }
+      ],
+      "resources": {
+        "memory_mb": 256,
+        "cpus": 1
+      },
+      "window": {
+        "width": 1000,
+        "height": 700
+      },
+      "icon": "icons/wireguard.svg",
       "standalone": true
     }
   ]
