@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-15T20:39:51Z",
+  "published": "2026-10-16T04:43:12Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -127,6 +127,57 @@
         "url": "https://github.com/dani-garcia/vaultwarden"
       },
       "icon": "icons/pass.svg"
+    },
+    {
+      "id": "antivirus",
+      "name": {
+        "fr": "Antivirus",
+        "en": "Antivirus"
+      },
+      "tagline": {
+        "fr": "Analyse les dossiers de votre NAS",
+        "en": "Scans the folders of your NAS"
+      },
+      "description": {
+        "fr": "Recherche les logiciels malveillants dans les dossiers que vous lui confiez, avec les droits d'un utilisateur du NAS que vous choisissez. Analyse planifiée la nuit ou à la demande, signatures mises à jour chaque nuit, rapports, et quarantaine si vous lui donnez l'accès en écriture. Moteur ClamAV.",
+        "en": "Looks for malware in the folders you entrust to it, with the rights of a NAS user you choose. Scheduled or on-demand scans, nightly signature updates, reports, and quarantine when given write access. ClamAV engine."
+      },
+      "category": "securite",
+      "version": "1.0.0",
+      "min_desktroo": "2.48.0",
+      "channel": "test",
+      "image": "ghcr.io/nabief/desktroo-antivirus",
+      "digest": "sha256:599e58daa90eb055e17098939fa280063e222d123d068014988e697dc492569d",
+      "port": 8080,
+      "health": "/healthz",
+      "sso": "header",
+      "run_as": "568:568",
+      "nas_access": {
+        "mode": "rw",
+        "why": {
+          "fr": "Lire vos fichiers pour les analyser, et déplacer en quarantaine ceux qui sont infectés. Choisissez « lecture seule » pour qu'il signale sans rien déplacer.",
+          "en": "Read your files to scan them, and move infected ones to quarantine. Choose read-only to report without moving anything."
+        }
+      },
+      "env": {
+        "TZ": "@host"
+      },
+      "volumes": [
+        {
+          "name": "data",
+          "mount": "/data"
+        }
+      ],
+      "resources": {
+        "memory_mb": 2048,
+        "cpus": 1
+      },
+      "window": {
+        "width": 900,
+        "height": 660
+      },
+      "icon": "icons/antivirus.svg",
+      "standalone": true
     }
   ]
 }
