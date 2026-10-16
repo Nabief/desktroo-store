@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T15:41:00Z",
+  "published": "2026-10-16T15:42:07Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -423,8 +423,8 @@
         "en": "It opens port 3001 on your local network only: that is the address of its interface. It is never opened to the Internet."
       },
       "setup_note": {
-        "fr": "À la première ouverture, http://{ip}:3001, créez votre compte administrateur (la base de données est déjà réglée). Ne redirigez pas le port 3001 sur votre box : si vous voulez le joindre de l'extérieur, passez par le VPN ou par un domaine protégé.",
-        "en": "On first opening, http://{ip}:3001, create your administrator account (the database is already set up). Do not forward port 3001 on your router: to reach it from outside, use the VPN or a protected domain."
+        "fr": "À la première ouverture, http://{ip}:3001, créez votre compte administrateur (la base de données est déjà réglée). Ne redirigez pas le port 3001 sur votre box : si vous voulez le joindre de l'extérieur, passez par le VPN ou par un domaine protégé.\n\nUptime Kuma peut annoncer qu'une nouvelle version existe : la mise à jour se fait dans Desktroo Apps (bouton « Mettre à jour »), pas depuis Kuma.",
+        "en": "On first opening, http://{ip}:3001, create your administrator account (the database is already set up). Do not forward port 3001 on your router: to reach it from outside, use the VPN or a protected domain.\n\nUptime Kuma may announce that a new version exists: the update is done in Desktroo Apps (“Update” button), not from Kuma."
       },
       "license": {
         "name": "Uptime Kuma (MIT)",
