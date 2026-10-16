@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T08:59:02Z",
+  "published": "2026-10-16T09:03:12Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -193,7 +193,6 @@
         "en": "A DNS server that filters ads, trackers and dangerous sites for every device at home or at the office: TVs, phones, computers, with nothing to install on each. Statistics, block lists, per-device rules. Ready to use: just set the NAS address as the DNS server in your router. AdGuard Home engine (GPL-3.0), unmodified official image."
       },
       "category": "reseau",
-      "channel": "test",
       "version": "1.0.0",
       "min_desktroo": "2.50.1",
       "image": "docker.io/adguard/adguardhome",
@@ -274,7 +273,6 @@
         "en": "A personal VPN: from your phone or computer, wherever you are, you reach your NAS and your network as if you were at home. Each device has its own key, which you can enable or remove at any time; adding one is a QR code scan. wg-easy engine (AGPL-3.0), unmodified official image, using the WireGuard protocol. WireGuard® is a registered trademark of Jason A. Donenfeld; Desktroo is not affiliated with or endorsed by the WireGuard project."
       },
       "category": "reseau",
-      "channel": "test",
       "version": "1.0.4",
       "min_desktroo": "2.53.4",
       "image": "ghcr.io/wg-easy/wg-easy",
