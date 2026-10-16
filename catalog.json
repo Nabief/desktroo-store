@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T08:33:03Z",
+  "published": "2026-10-16T08:40:39Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -275,8 +275,8 @@
       },
       "category": "reseau",
       "channel": "test",
-      "version": "1.0.3",
-      "min_desktroo": "2.53.3",
+      "version": "1.0.4",
+      "min_desktroo": "2.53.4",
       "image": "ghcr.io/wg-easy/wg-easy",
       "tag": "15",
       "digest": "sha256:0e7bc9d34e86ddcaa92bc700d4d7dc9b33291dbc07ac8d13382f7c2095f949ec",
@@ -378,7 +378,8 @@
         "height": 700
       },
       "icon": "icons/wireguard.svg",
-      "standalone": true
+      "standalone": false,
+      "open_url": "http://{ip}:51821"
     }
   ]
 }
