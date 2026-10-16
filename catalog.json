@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T08:30:56Z",
+  "published": "2026-10-16T08:33:03Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -275,8 +275,8 @@
       },
       "category": "reseau",
       "channel": "test",
-      "version": "1.0.2",
-      "min_desktroo": "2.53.2",
+      "version": "1.0.3",
+      "min_desktroo": "2.53.3",
       "image": "ghcr.io/wg-easy/wg-easy",
       "tag": "15",
       "digest": "sha256:0e7bc9d34e86ddcaa92bc700d4d7dc9b33291dbc07ac8d13382f7c2095f949ec",
@@ -309,15 +309,25 @@
             "fr": "VPN WireGuard",
             "en": "WireGuard VPN"
           }
+        },
+        {
+          "port": 51821,
+          "to": 8080,
+          "proto": "tcp",
+          "bind": "lan",
+          "label": {
+            "fr": "Administration (réseau local)",
+            "en": "Administration (local network)"
+          }
         }
       ],
       "network_why": {
-        "fr": "Il ouvre le port 51820 (UDP) : c'est par lui que vos appareils se connectent de l'extérieur. Il demande aussi des droits réseau étendus (créer l'interface VPN et transférer le trafic), que l'app n'utilise que pour cela.",
-        "en": "It opens port 51820 (UDP): that is how your devices connect from outside. It also needs extended network rights (to create the VPN interface and forward traffic), which it uses for nothing else."
+        "fr": "Il ouvre le port 51820 (UDP) : c'est par lui que vos appareils se connectent de l'extérieur. Il ouvre aussi le port 51821 (administration) sur votre réseau local seulement. Il demande enfin des droits réseau étendus (créer l'interface VPN et transférer le trafic), que l'app n'utilise que pour cela.",
+        "en": "It opens port 51820 (UDP): that is how your devices connect from outside. It also opens port 51821 (administration) on your local network only. Finally it needs extended network rights (to create the VPN interface and forward traffic), which it uses for nothing else."
       },
       "setup_note": {
-        "fr": "Dans votre box, redirigez le port 51820 en UDP vers ce NAS ({ip}). Ajoutez ensuite un appareil et scannez son QR code avec l'application WireGuard de votre téléphone.",
-        "en": "In your router, forward UDP port 51820 to this NAS ({ip}). Then add a device and scan its QR code with the WireGuard app on your phone."
+        "fr": "Dans votre box, redirigez le port 51820 en UDP vers ce NAS ({ip}). Ne redirigez jamais le port 51821 : l'administration se fait depuis votre réseau local, à l'adresse http://{ip}:51821, avec le compte indiqué plus bas. Ajoutez ensuite un appareil et scannez son QR code avec l'application WireGuard de votre téléphone.",
+        "en": "In your router, forward UDP port 51820 to this NAS ({ip}). Never forward port 51821: administration is done from your local network, at http://{ip}:51821, with the account shown below. Then add a device and scan its QR code with the WireGuard app on your phone."
       },
       "install_fields": [
         {
@@ -351,8 +361,7 @@
         "INIT_ENABLED": "true",
         "INIT_USERNAME": "admin",
         "INIT_PASSWORD": "@derive:wg-admin",
-        "INIT_PORT": "51820",
-        "NUXT_APP_BASE_URL": "/a/wireguard/"
+        "INIT_PORT": "51820"
       },
       "volumes": [
         {
