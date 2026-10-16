@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T14:41:42Z",
+  "published": "2026-10-16T14:48:20Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -378,6 +378,78 @@
       "icon": "icons/wireguard.svg",
       "standalone": false,
       "open_url": "http://{ip}:51821"
+    },
+    {
+      "id": "uptime-kuma",
+      "name": {
+        "fr": "Uptime Kuma",
+        "en": "Uptime Kuma"
+      },
+      "tagline": {
+        "fr": "Surveille vos sites et services, et vous prévient en cas de panne",
+        "en": "Watches your sites and services, and alerts you when something goes down"
+      },
+      "description": {
+        "fr": "Vérifie en continu que vos sites web, serveurs, applications et appareils répondent bien, et vous prévient dès qu'un service tombe, par e-mail, Telegram, SMS ou une centaine d'autres moyens.\n\nTableau de bord en temps réel, historique de disponibilité, pages d'état publiques à partager avec vos clients, vérifications toutes les 20 secondes.\n\nMoteur Uptime Kuma (MIT), image officielle non modifiée. Desktroo n'est ni affilié ni soutenu par le projet Uptime Kuma.",
+        "en": "Continuously checks that your websites, servers, apps and devices respond, and alerts you as soon as a service goes down, by email, Telegram, SMS or a hundred other ways.\n\nReal-time dashboard, availability history, public status pages to share with your customers, checks every 20 seconds.\n\nUptime Kuma engine (MIT), unmodified official image. Desktroo is not affiliated with or endorsed by the Uptime Kuma project."
+      },
+      "category": "supervision",
+      "channel": "test",
+      "version": "1.0.0",
+      "min_desktroo": "2.54.12",
+      "image": "docker.io/louislam/uptime-kuma",
+      "tag": "2.5.0",
+      "digest": "sha256:a8610b3b4c38077922ba51b036691e06887d7cefd91fe620fd3d6d23d03dc240",
+      "port": 8080,
+      "health": "/",
+      "sso": "header",
+      "run_as": "0:0",
+      "read_only": false,
+      "host_ports": [
+        {
+          "port": 3001,
+          "to": 8080,
+          "proto": "tcp",
+          "bind": "lan",
+          "label": {
+            "fr": "Interface (réseau local)",
+            "en": "Interface (local network)"
+          }
+        }
+      ],
+      "open_url": "http://{ip}:3001",
+      "network_why": {
+        "fr": "Il ouvre le port 3001 sur votre réseau local seulement : c'est l'adresse de son interface. Il ne s'ouvre jamais sur Internet.",
+        "en": "It opens port 3001 on your local network only: that is the address of its interface. It is never opened to the Internet."
+      },
+      "setup_note": {
+        "fr": "À la première ouverture, http://{ip}:3001, créez votre compte administrateur et choisissez la base « SQLite » (la plus simple). Ne redirigez pas le port 3001 sur votre box : si vous voulez le joindre de l'extérieur, passez par le VPN ou par un domaine protégé.",
+        "en": "On first opening, http://{ip}:3001, create your administrator account and choose the “SQLite” database (the simplest). Do not forward port 3001 on your router: to reach it from outside, use the VPN or a protected domain."
+      },
+      "license": {
+        "name": "Uptime Kuma (MIT)",
+        "url": "https://github.com/louislam/uptime-kuma"
+      },
+      "env": {
+        "TZ": "@host",
+        "UPTIME_KUMA_PORT": "8080"
+      },
+      "volumes": [
+        {
+          "name": "data",
+          "mount": "/app/data"
+        }
+      ],
+      "resources": {
+        "memory_mb": 512,
+        "cpus": 1
+      },
+      "window": {
+        "width": 1000,
+        "height": 700
+      },
+      "icon": "icons/uptime-kuma.svg",
+      "standalone": false
     }
   ]
 }
