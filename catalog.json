@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T05:44:41Z",
+  "published": "2026-10-16T06:20:37Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -176,6 +176,87 @@
         "height": 660
       },
       "icon": "icons/antivirus.svg",
+      "standalone": true
+    },
+    {
+      "id": "adguard",
+      "name": {
+        "fr": "AdGuard Home",
+        "en": "AdGuard Home"
+      },
+      "tagline": {
+        "fr": "Bloque publicités et traqueurs pour tout le réseau",
+        "en": "Blocks ads and trackers for your whole network"
+      },
+      "description": {
+        "fr": "Un serveur DNS qui filtre les publicités, les traqueurs et les sites dangereux pour tous les appareils de la maison ou du bureau : télévision, téléphones, ordinateurs, sans rien installer sur chacun. Statistiques, listes de blocage, règles par appareil. Prêt à l'emploi : il suffit d'indiquer l'adresse du NAS comme serveur DNS dans votre box. Moteur AdGuard Home (GPL-3.0), image officielle non modifiée.",
+        "en": "A DNS server that filters ads, trackers and dangerous sites for every device at home or at the office: TVs, phones, computers, with nothing to install on each. Statistics, block lists, per-device rules. Ready to use: just set the NAS address as the DNS server in your router. AdGuard Home engine (GPL-3.0), unmodified official image."
+      },
+      "category": "reseau",
+      "channel": "test",
+      "version": "1.0.0",
+      "min_desktroo": "2.50.0",
+      "image": "docker.io/adguard/adguardhome",
+      "tag": "v0.107.79",
+      "digest": "sha256:aba9e3bf0613be3ba3755e1fc311b126e2c24bec25e18b6483894a88283074f0",
+      "port": 8080,
+      "health": "/",
+      "sso": "header",
+      "run_as": "0:0",
+      "cap_add": [
+        "NET_BIND_SERVICE"
+      ],
+      "host_ports": [
+        {
+          "port": 53,
+          "proto": "both",
+          "label": {
+            "fr": "Serveur DNS",
+            "en": "DNS server"
+          }
+        }
+      ],
+      "network_why": {
+        "fr": "Il ouvre le port 53 (DNS) sur votre réseau : c'est ce qui permet aux appareils de lui poser leurs questions.",
+        "en": "It opens port 53 (DNS) on your network: that is how your devices send it their queries."
+      },
+      "setup_note": {
+        "fr": "Pour filtrer tout le réseau, indiquez l'adresse de ce NAS ({ip}) comme serveur DNS dans votre box, à la place de celui de votre fournisseur. Un appareil seul peut aussi l'utiliser en réglant son DNS sur cette adresse.",
+        "en": "To filter your whole network, set this NAS ({ip}) as the DNS server in your router, in place of your provider's. A single device can also use it by setting its DNS to this address."
+      },
+      "license": {
+        "name": "AdGuard Home (GPL-3.0)",
+        "url": "https://github.com/AdguardTeam/AdGuardHome"
+      },
+      "env": {
+        "TZ": "@host"
+      },
+      "volumes": [
+        {
+          "name": "conf",
+          "mount": "/opt/adguardhome/conf"
+        },
+        {
+          "name": "work",
+          "mount": "/opt/adguardhome/work"
+        }
+      ],
+      "seed": [
+        {
+          "volume": "conf",
+          "path": "AdGuardHome.yaml",
+          "content": "# Configuration de départ écrite par Desktroo. AdGuard Home la complète et la modifie ensuite lui-même.\nhttp:\n  address: 0.0.0.0:8080\nusers: []\ndns:\n  bind_hosts:\n    - 0.0.0.0\n  port: 53\n  upstream_dns:\n    - https://dns10.quad9.net/dns-query\n  bootstrap_dns:\n    - 9.9.9.10\n    - 149.112.112.10\nschema_version: 34\n"
+        }
+      ],
+      "resources": {
+        "memory_mb": 512,
+        "cpus": 1
+      },
+      "window": {
+        "width": 1000,
+        "height": 700
+      },
+      "icon": "icons/adguard.svg",
       "standalone": true
     }
   ]
