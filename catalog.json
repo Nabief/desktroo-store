@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T06:20:37Z",
+  "published": "2026-10-16T06:26:46Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -195,7 +195,7 @@
       "category": "reseau",
       "channel": "test",
       "version": "1.0.0",
-      "min_desktroo": "2.50.0",
+      "min_desktroo": "2.50.1",
       "image": "docker.io/adguard/adguardhome",
       "tag": "v0.107.79",
       "digest": "sha256:aba9e3bf0613be3ba3755e1fc311b126e2c24bec25e18b6483894a88283074f0",
