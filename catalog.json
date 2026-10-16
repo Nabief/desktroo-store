@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T08:24:14Z",
+  "published": "2026-10-16T08:30:56Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -275,7 +275,7 @@
       },
       "category": "reseau",
       "channel": "test",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "min_desktroo": "2.53.2",
       "image": "ghcr.io/wg-easy/wg-easy",
       "tag": "15",
@@ -351,7 +351,8 @@
         "INIT_ENABLED": "true",
         "INIT_USERNAME": "admin",
         "INIT_PASSWORD": "@derive:wg-admin",
-        "INIT_PORT": "51820"
+        "INIT_PORT": "51820",
+        "NUXT_APP_BASE_URL": "/a/wireguard/"
       },
       "volumes": [
         {
