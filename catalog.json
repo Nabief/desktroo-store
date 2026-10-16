@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T16:22:40Z",
+  "published": "2026-10-16T16:54:58Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -474,7 +474,7 @@
       },
       "category": "photos",
       "channel": "test",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "min_desktroo": "2.54.16",
       "image": "docker.io/photoprism/photoprism",
       "tag": "261007",
@@ -509,8 +509,8 @@
       ],
       "open_url": "http://{ip}:2342",
       "setup_note": {
-        "fr": "Ouvrez http://{ip}:2342 et connectez-vous avec l'identifiant et le mot de passe affichés sur cette fiche. L'indexage de vos photos démarre depuis le menu Bibliothèque > Indexage ; il peut prendre du temps et utiliser beaucoup le processeur la première fois.\n\nLe mot de passe affiché n'est valable que tant que vous ne l'avez pas changé dans PhotoPrism. Ne redirigez pas le port 2342 sur votre box : pour y accéder de l'extérieur, passez par le VPN.",
-        "en": "Open http://{ip}:2342 and sign in with the username and password shown on this page. Indexing starts from Library > Index; the first run can take a while and use a lot of CPU.\n\nThe displayed password is only valid until you change it in PhotoPrism. Do not forward port 2342 on your router: to reach it from outside, use the VPN."
+        "fr": "Ouvrez http://{ip}:2342 et connectez-vous avec l'identifiant et le mot de passe affichés sur cette fiche. L'indexage démarre depuis le menu Bibliothèque > Indexer : choisissez un dossier de photos précis, pas « Originaux » ni la racine de votre NAS. Il peut prendre du temps et utiliser beaucoup le processeur la première fois.\n\nLe mot de passe affiché n'est valable que tant que vous ne l'avez pas changé dans PhotoPrism. Ne redirigez pas le port 2342 sur votre box : pour y accéder de l'extérieur, passez par le VPN.",
+        "en": "Open http://{ip}:2342 and sign in with the username and password shown on this page. Indexing starts from Library > Index: pick a specific photo folder, not “Originals” nor the root of your NAS. The first run can take a while and use a lot of CPU.\n\nThe displayed password is only valid until you change it in PhotoPrism. Do not forward port 2342 on your router: to reach it from outside, use the VPN."
       },
       "license": {
         "name": "PhotoPrism (AGPL-3.0)",
@@ -528,7 +528,10 @@
         "PHOTOPRISM_READONLY": "true",
         "PHOTOPRISM_DISABLE_TLS": "true",
         "PHOTOPRISM_SITE_URL": "http://localhost:8080/",
-        "PHOTOPRISM_LOG_LEVEL": "info"
+        "PHOTOPRISM_LOG_LEVEL": "info",
+        "PHOTOPRISM_WORKERS": "2",
+        "PHOTOPRISM_AUTO_INDEX": "-1",
+        "PHOTOPRISM_AUTO_IMPORT": "-1"
       },
       "volumes": [
         {
