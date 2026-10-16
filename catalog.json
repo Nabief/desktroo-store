@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T04:43:12Z",
+  "published": "2026-10-16T04:51:28Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -143,11 +143,11 @@
         "en": "Looks for malware in the folders you entrust to it, with the rights of a NAS user you choose. Scheduled or on-demand scans, nightly signature updates, reports, and quarantine when given write access. ClamAV engine."
       },
       "category": "securite",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "min_desktroo": "2.48.0",
       "channel": "test",
       "image": "ghcr.io/nabief/desktroo-antivirus",
-      "digest": "sha256:599e58daa90eb055e17098939fa280063e222d123d068014988e697dc492569d",
+      "digest": "sha256:fbc1b34b5778a41268dd2bc7c68f0a1dba53ee6b49869724d4d7b6c9cb866ae2",
       "port": 8080,
       "health": "/healthz",
       "sso": "header",
