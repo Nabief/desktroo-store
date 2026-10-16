@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T09:17:37Z",
+  "published": "2026-10-16T09:39:10Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -14,8 +14,8 @@
         "en": "Your 2FA codes, on your NAS"
       },
       "description": {
-        "fr": "Générez les codes à 6 chiffres de vos comptes protégés par double authentification. Le coffre est chiffré dans votre navigateur par votre mot de passe maître : même votre NAS ne voit pas vos codes. Un coffre par utilisateur, verrouillage automatique après 10 minutes.",
-        "en": "Generate the 6-digit codes of your two-factor accounts. The vault is encrypted in your browser with your master password."
+        "fr": "Générez les codes à 6 chiffres de vos comptes protégés par double authentification.\n\nLe coffre est chiffré dans votre navigateur par votre mot de passe maître : même votre NAS ne voit pas vos codes. Un coffre par utilisateur, verrouillage automatique après 10 minutes.",
+        "en": "Generate the 6-digit codes of your two-factor accounts.\n\nThe vault is encrypted in your browser with your master password: even your NAS cannot see your codes. One vault per user, automatic lock after 10 minutes."
       },
       "category": "securite",
       "version": "1.0.4",
@@ -58,8 +58,8 @@
         "en": "Host your websites on the NAS: PHP and MariaDB"
       },
       "description": {
-        "fr": "Le serveur web de Desktroo : vos sites (WordPress, Nextcloud, PrestaShop…), PHP 8.3, 8.2, 8.1 et 7.4, et MariaDB pour les bases de données. Il ajoute la fenêtre « Sites Web » au bureau. Désinstallé, il n'occupe rien ; vos sites et vos bases restent sur le NAS.",
-        "en": "Desktroo's web server: your websites, PHP 8.3 to 7.4 and MariaDB. Adds the Websites window."
+        "fr": "Le serveur web de Desktroo : vos sites (WordPress, Nextcloud, PrestaShop…), PHP 8.3, 8.2, 8.1 et 7.4, et MariaDB pour les bases de données.\n\nIl ajoute la fenêtre « Sites Web » au bureau. Désinstallé, il n'occupe rien ; vos sites et vos bases restent sur le NAS.",
+        "en": "Desktroo's web server: your websites (WordPress, Nextcloud, PrestaShop…), PHP 8.3, 8.2, 8.1 and 7.4, and MariaDB for databases.\n\nIt adds the “Websites” window to the desktop. Uninstalled, it takes up nothing; your sites and databases stay on the NAS."
       },
       "category": "hebergement",
       "version": "1.0.0",
@@ -86,8 +86,8 @@
         "en": "Your sites over https, with your own domains"
       },
       "description": {
-        "fr": "Reverse-proxy NPMplus (logiciel libre) : il publie vos sites et vos apps sous vos noms de domaine, en https, avec des certificats Let's Encrypt renouvelés tout seuls. Installé et mis à jour par Desktroo. Il écoute sur 8090 et 8453 pour laisser 80 et 443 à TrueNAS. Désinstallé, ses certificats et réglages restent sur le NAS.",
-        "en": "NPMplus reverse proxy (free software): publishes your sites and apps under your own domains, over https, with auto-renewed Let's Encrypt certificates. Listens on 8090 and 8453, leaving 80 and 443 to TrueNAS."
+        "fr": "Reverse-proxy NPMplus (logiciel libre) : il publie vos sites et vos apps sous vos noms de domaine, en https, avec des certificats Let's Encrypt renouvelés tout seuls.\n\nInstallé et mis à jour par Desktroo. Il écoute sur 8090 et 8453 pour laisser 80 et 443 à TrueNAS. Désinstallé, ses certificats et réglages restent sur le NAS.",
+        "en": "NPMplus reverse proxy (free software): publishes your sites and apps under your own domains, over https, with auto-renewed Let's Encrypt certificates.\n\nInstalled and updated by Desktroo. It listens on 8090 and 8453, leaving 80 and 443 to TrueNAS. Uninstalled, its certificates and settings stay on the NAS."
       },
       "category": "reseau",
       "version": "1.0.0",
@@ -113,8 +113,8 @@
         "en": "Your passwords on your NAS, with the Bitwarden apps"
       },
       "description": {
-        "fr": "Un coffre de mots de passe pour toute la famille ou l'équipe, hébergé sur votre NAS. Il fonctionne avec les applis Bitwarden officielles et gratuites : remplissage automatique dans le navigateur, sur le téléphone et sur le PC. Chaque personne a son coffre, chiffré avec son propre mot de passe maître ; les comptes s'ouvrent sur invitation. Publié en https sous votre domaine grâce à NPMplus. Basé sur Vaultwarden (logiciel libre, AGPL-3.0), compatible Bitwarden ; non édité par Bitwarden, Inc.",
-        "en": "A password vault for the whole family or team, hosted on your NAS. Works with the official, free Bitwarden apps: autofill in the browser, on the phone and on the PC. Everyone has their own vault, encrypted with their own master password; accounts open by invitation. Published over https under your domain through NPMplus. Built on Vaultwarden (free software, AGPL-3.0), Bitwarden-compatible; not published by Bitwarden, Inc."
+        "fr": "Un coffre de mots de passe pour toute la famille ou l'équipe, hébergé sur votre NAS.\n\nIl fonctionne avec les applis Bitwarden officielles et gratuites : remplissage automatique dans le navigateur, sur le téléphone et sur le PC. Chaque personne a son coffre, chiffré avec son propre mot de passe maître ; les comptes s'ouvrent sur invitation. Publié en https sous votre domaine grâce à NPMplus.\n\nBasé sur Vaultwarden (logiciel libre, AGPL-3.0), compatible Bitwarden ; non édité par Bitwarden, Inc.",
+        "en": "A password vault for the whole family or team, hosted on your NAS.\n\nIt works with the official, free Bitwarden apps: autofill in the browser, on the phone and on the PC. Everyone has their own vault, encrypted with their own master password; accounts open by invitation. Published over https under your domain through NPMplus.\n\nBuilt on Vaultwarden (free software, AGPL-3.0), Bitwarden-compatible; not published by Bitwarden, Inc."
       },
       "category": "securite",
       "version": "1.0.0",
@@ -139,8 +139,8 @@
         "en": "Scans the folders of your NAS"
       },
       "description": {
-        "fr": "Recherche les logiciels malveillants dans tous les dossiers de votre NAS, sans rien à régler. Analyse planifiée la nuit ou à la demande, signatures mises à jour chaque nuit, rapports. Les fichiers dangereux sont mis en quarantaine par Desktroo : l'antivirus lui-même ne peut rien modifier. Moteur ClamAV.",
-        "en": "Looks for malware in every folder of your NAS, with nothing to set up. Scheduled or on-demand scans, nightly signature updates, reports. Dangerous files are quarantined by Desktroo: the antivirus itself cannot change anything. ClamAV engine."
+        "fr": "Recherche les logiciels malveillants dans tous les dossiers de votre NAS, sans rien à régler.\n\nAnalyse planifiée la nuit ou à la demande, signatures mises à jour chaque nuit, rapports. Les fichiers dangereux sont mis en quarantaine par Desktroo : l'antivirus lui-même ne peut rien modifier.\n\nMoteur ClamAV.",
+        "en": "Looks for malware in every folder of your NAS, with nothing to set up.\n\nScheduled or on-demand scans, nightly signature updates, reports. Dangerous files are quarantined by Desktroo: the antivirus itself cannot change anything.\n\nClamAV engine."
       },
       "category": "securite",
       "version": "1.0.2",
@@ -189,8 +189,8 @@
         "en": "Blocks ads and trackers for your whole network"
       },
       "description": {
-        "fr": "Un serveur DNS qui filtre les publicités, les traqueurs et les sites dangereux pour tous les appareils de la maison ou du bureau : télévision, téléphones, ordinateurs, sans rien installer sur chacun. Statistiques, listes de blocage, règles par appareil. Prêt à l'emploi : il suffit d'indiquer l'adresse du NAS comme serveur DNS dans votre box. Moteur AdGuard Home (GPL-3.0), image officielle non modifiée.",
-        "en": "A DNS server that filters ads, trackers and dangerous sites for every device at home or at the office: TVs, phones, computers, with nothing to install on each. Statistics, block lists, per-device rules. Ready to use: just set the NAS address as the DNS server in your router. AdGuard Home engine (GPL-3.0), unmodified official image."
+        "fr": "Un serveur DNS qui filtre les publicités, les traqueurs et les sites dangereux pour tous les appareils de la maison ou du bureau : télévision, téléphones, ordinateurs, sans rien installer sur chacun.\n\nStatistiques, listes de blocage, règles par appareil. Prêt à l'emploi : il suffit d'indiquer l'adresse du NAS comme serveur DNS dans votre box.\n\nMoteur AdGuard Home (GPL-3.0), image officielle non modifiée.",
+        "en": "A DNS server that filters ads, trackers and dangerous sites for every device at home or at the office: TVs, phones, computers, with nothing to install on each.\n\nStatistics, block lists, per-device rules. Ready to use: just set the NAS address as the DNS server in your router.\n\nAdGuard Home engine (GPL-3.0), unmodified official image."
       },
       "category": "reseau",
       "version": "1.0.0",
@@ -269,8 +269,8 @@
         "en": "Reach your network from anywhere, securely"
       },
       "description": {
-        "fr": "Un VPN personnel : depuis votre téléphone ou votre ordinateur, où que vous soyez, vous retrouvez votre NAS et votre réseau comme si vous étiez à la maison. Chaque appareil a sa propre clé, qu'on active ou retire à tout moment ; l'ajout se fait en scannant un QR code. Moteur wg-easy (AGPL-3.0), image officielle non modifiée, avec le protocole WireGuard. WireGuard® est une marque déposée de Jason A. Donenfeld ; Desktroo n'est ni affilié ni soutenu par le projet WireGuard.",
-        "en": "A personal VPN: from your phone or computer, wherever you are, you reach your NAS and your network as if you were at home. Each device has its own key, which you can enable or remove at any time; adding one is a QR code scan. wg-easy engine (AGPL-3.0), unmodified official image, using the WireGuard protocol. WireGuard® is a registered trademark of Jason A. Donenfeld; Desktroo is not affiliated with or endorsed by the WireGuard project."
+        "fr": "Un VPN personnel : depuis votre téléphone ou votre ordinateur, où que vous soyez, vous retrouvez votre NAS et votre réseau comme si vous étiez à la maison.\n\nChaque appareil a sa propre clé, qu'on active ou retire à tout moment ; l'ajout se fait en scannant un QR code.\n\nMoteur wg-easy (AGPL-3.0), image officielle non modifiée, avec le protocole WireGuard. WireGuard® est une marque déposée de Jason A. Donenfeld ; Desktroo n'est ni affilié ni soutenu par le projet WireGuard.",
+        "en": "A personal VPN: from your phone or computer, wherever you are, you reach your NAS and your network as if you were at home.\n\nEach device has its own key, which you can enable or remove at any time; adding one is a QR code scan.\n\nwg-easy engine (AGPL-3.0), unmodified official image, using the WireGuard protocol. WireGuard® is a registered trademark of Jason A. Donenfeld; Desktroo is not affiliated with or endorsed by the WireGuard project."
       },
       "category": "reseau",
       "version": "1.0.4",
@@ -390,13 +390,13 @@
         "en": "Back up your computers to your NAS"
       },
       "description": {
-        "fr": "Sauvegarde automatique des ordinateurs de la maison ou du bureau (Windows, Mac, Linux) sur votre NAS : fichiers ou image complète du disque, sauvegardes régulières et incrémentales, restauration de fichiers à la demande. Une petite application s'installe sur chaque ordinateur ; Desktroo vous donne le programme d'installation déjà réglé pour ce NAS. Moteur UrBackup (GPL-3.0), image officielle non modifiée. Desktroo n'est ni affilié ni soutenu par le projet UrBackup.",
-        "en": "Automatic backup of your home or office computers (Windows, Mac, Linux) to your NAS: files or a full disk image, regular incremental backups, file restore on demand. A small app installs on each computer; Desktroo gives you the installer already set up for this NAS. UrBackup engine (GPL-3.0), unmodified official image. Desktroo is not affiliated with or endorsed by the UrBackup project."
+        "fr": "Sauvegarde automatique des ordinateurs de la maison ou du bureau (Windows, Mac, Linux) sur votre NAS : fichiers ou image complète du disque, sauvegardes régulières et incrémentales, restauration de fichiers à la demande.\n\nUne petite application s'installe sur chaque ordinateur ; Desktroo vous donne le programme d'installation déjà réglé pour ce NAS.\n\nMoteur UrBackup (GPL-3.0), image officielle non modifiée. Desktroo n'est ni affilié ni soutenu par le projet UrBackup.",
+        "en": "Automatic backup of your home or office computers (Windows, Mac, Linux) to your NAS: files or a full disk image, regular incremental backups, file restore on demand.\n\nA small app installs on each computer; Desktroo gives you the installer already set up for this NAS.\n\nUrBackup engine (GPL-3.0), unmodified official image. Desktroo is not affiliated with or endorsed by the UrBackup project."
       },
       "category": "sauvegarde",
       "channel": "test",
-      "version": "1.0.0",
-      "min_desktroo": "2.54.0",
+      "version": "1.0.1",
+      "min_desktroo": "2.54.3",
       "image": "uroni/urbackup-server",
       "tag": "2.5.x",
       "digest": "sha256:fd218c45192fad0d7df7989da2c991264eec0a37a85e33499db419b203e9745f",
@@ -405,6 +405,13 @@
       "sso": "header",
       "run_as": "0:0",
       "read_only": false,
+      "cap_add": [
+        "CHOWN",
+        "DAC_OVERRIDE",
+        "FOWNER",
+        "SETUID",
+        "SETGID"
+      ],
       "command": [
         "run",
         "-p",
@@ -431,8 +438,8 @@
         }
       ],
       "network_why": {
-        "fr": "Il ouvre sur votre réseau local (jamais sur Internet) le port 55415, par lequel les ordinateurs se connectent pour envoyer leurs sauvegardes, et le port 35623 (UDP) pour les détecter. Son interface d'administration n'est joignable que depuis Desktroo.",
-        "en": "It opens, on your local network only (never the Internet), port 55415, which computers use to send their backups, and port 35623 (UDP) to discover them. Its administration interface can only be reached from Desktroo."
+        "fr": "Il ouvre sur votre réseau local (jamais sur Internet) le port 55415, par lequel les ordinateurs se connectent pour envoyer leurs sauvegardes, et le port 35623 (UDP) pour les détecter. Son interface d'administration n'est joignable que depuis Desktroo. Il demande aussi des droits système limités (changer le propriétaire de ses fichiers et de ses comptes internes), qu'il n'utilise que pour gérer ses propres sauvegardes.",
+        "en": "It opens, on your local network only (never the Internet), port 55415, which computers use to send their backups, and port 35623 (UDP) to discover them. Its administration interface can only be reached from Desktroo. It also needs limited system rights (changing the owner of its own files and internal accounts), which it uses only to manage its own backups."
       },
       "license": {
         "name": "UrBackup (GPL-3.0)",
