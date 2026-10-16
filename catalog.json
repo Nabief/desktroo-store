@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T15:42:07Z",
+  "published": "2026-10-16T15:53:46Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -394,7 +394,6 @@
         "en": "Continuously checks that your websites, servers, apps and devices respond, and alerts you as soon as a service goes down, by email, Telegram, SMS or a hundred other ways.\n\nReal-time dashboard, availability history, public status pages to share with your customers, checks every 20 seconds.\n\nUptime Kuma engine (MIT), unmodified official image. Desktroo is not affiliated with or endorsed by the Uptime Kuma project."
       },
       "category": "supervision",
-      "channel": "test",
       "version": "1.0.2",
       "min_desktroo": "2.54.12",
       "image": "docker.io/louislam/uptime-kuma",
