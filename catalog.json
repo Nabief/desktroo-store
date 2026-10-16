@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T09:39:10Z",
+  "published": "2026-10-16T14:41:42Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -378,98 +378,6 @@
       "icon": "icons/wireguard.svg",
       "standalone": false,
       "open_url": "http://{ip}:51821"
-    },
-    {
-      "id": "urbackup",
-      "name": {
-        "fr": "Sauvegarde PC",
-        "en": "PC Backup"
-      },
-      "tagline": {
-        "fr": "Sauvegardez vos ordinateurs sur votre NAS",
-        "en": "Back up your computers to your NAS"
-      },
-      "description": {
-        "fr": "Sauvegarde automatique des ordinateurs de la maison ou du bureau (Windows, Mac, Linux) sur votre NAS : fichiers ou image complète du disque, sauvegardes régulières et incrémentales, restauration de fichiers à la demande.\n\nUne petite application s'installe sur chaque ordinateur ; Desktroo vous donne le programme d'installation déjà réglé pour ce NAS.\n\nMoteur UrBackup (GPL-3.0), image officielle non modifiée. Desktroo n'est ni affilié ni soutenu par le projet UrBackup.",
-        "en": "Automatic backup of your home or office computers (Windows, Mac, Linux) to your NAS: files or a full disk image, regular incremental backups, file restore on demand.\n\nA small app installs on each computer; Desktroo gives you the installer already set up for this NAS.\n\nUrBackup engine (GPL-3.0), unmodified official image. Desktroo is not affiliated with or endorsed by the UrBackup project."
-      },
-      "category": "sauvegarde",
-      "channel": "test",
-      "version": "1.0.1",
-      "min_desktroo": "2.54.3",
-      "image": "uroni/urbackup-server",
-      "tag": "2.5.x",
-      "digest": "sha256:fd218c45192fad0d7df7989da2c991264eec0a37a85e33499db419b203e9745f",
-      "port": 8080,
-      "health": "/",
-      "sso": "header",
-      "run_as": "0:0",
-      "read_only": false,
-      "cap_add": [
-        "CHOWN",
-        "DAC_OVERRIDE",
-        "FOWNER",
-        "SETUID",
-        "SETGID"
-      ],
-      "command": [
-        "run",
-        "-p",
-        "8080"
-      ],
-      "host_ports": [
-        {
-          "port": 55415,
-          "proto": "tcp",
-          "bind": "lan",
-          "label": {
-            "fr": "Ordinateurs à sauvegarder",
-            "en": "Computers to back up"
-          }
-        },
-        {
-          "port": 35623,
-          "proto": "udp",
-          "bind": "lan",
-          "label": {
-            "fr": "Détection des ordinateurs",
-            "en": "Computer discovery"
-          }
-        }
-      ],
-      "network_why": {
-        "fr": "Il ouvre sur votre réseau local (jamais sur Internet) le port 55415, par lequel les ordinateurs se connectent pour envoyer leurs sauvegardes, et le port 35623 (UDP) pour les détecter. Son interface d'administration n'est joignable que depuis Desktroo. Il demande aussi des droits système limités (changer le propriétaire de ses fichiers et de ses comptes internes), qu'il n'utilise que pour gérer ses propres sauvegardes.",
-        "en": "It opens, on your local network only (never the Internet), port 55415, which computers use to send their backups, and port 35623 (UDP) to discover them. Its administration interface can only be reached from Desktroo. It also needs limited system rights (changing the owner of its own files and internal accounts), which it uses only to manage its own backups."
-      },
-      "license": {
-        "name": "UrBackup (GPL-3.0)",
-        "url": "https://www.urbackup.org"
-      },
-      "env": {
-        "TZ": "@host",
-        "PUID": "0",
-        "PGID": "0"
-      },
-      "volumes": [
-        {
-          "name": "backups",
-          "mount": "/backups"
-        },
-        {
-          "name": "db",
-          "mount": "/var/urbackup"
-        }
-      ],
-      "resources": {
-        "memory_mb": 1024,
-        "cpus": 2
-      },
-      "window": {
-        "width": 1000,
-        "height": 700
-      },
-      "icon": "icons/urbackup.svg",
-      "standalone": false
     }
   ]
 }
