@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-17T04:54:49Z",
+  "published": "2026-10-17T07:51:41Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -571,7 +571,6 @@
         "en": "A personal media server: it sorts your NAS movies, shows, music and photos, fetches posters and summaries, and streams them to the TV, phone, tablet or browser of the whole family.\n\nSeparate accounts for each family member, resume playback where you left off, parental controls, subtitles, apps for most devices. No subscription, no data sent to a third party.\n\nJellyfin engine (GPL-2.0), unmodified official image. Desktroo is not affiliated with or endorsed by the Jellyfin project."
       },
       "category": "media",
-      "channel": "test",
       "version": "1.1.0",
       "min_desktroo": "2.54.20",
       "image": "docker.io/jellyfin/jellyfin",
