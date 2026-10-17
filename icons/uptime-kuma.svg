@@ -2,7 +2,7 @@
 <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
 <stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#0891b2"/>
 </linearGradient></defs>
-<rect width="64" height="64" rx="15" fill="url(#g)"/>
-<path d="M10 34h11l5-13 8 24 6-17 3 6h11" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="52" cy="14" r="4.5" fill="#fff"/>
+<rect width="64" height="64" rx="15" fill="url(#g)"/><g transform="translate(32 32) scale(.78) translate(-32 -32)">
+<path d="M10 34h11l5-13 8 24 6-17 3 6h11" fill="none" stroke="#fff" stroke-width="3.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="52" cy="14" r="4.5" fill="#fff"/></g>
 </svg>

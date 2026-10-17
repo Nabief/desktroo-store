@@ -2,8 +2,8 @@
 <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
 <stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/>
 </linearGradient></defs>
-<rect width="64" height="64" rx="15" fill="url(#g)"/>
-<rect x="11" y="16" width="42" height="32" rx="5" fill="none" stroke="#fff" stroke-width="4"/>
-<path d="M14 44l11-12 8 8 6-6 11 10" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="42" cy="26" r="4" fill="#fff"/>
+<rect width="64" height="64" rx="15" fill="url(#g)"/><g transform="translate(32 32) scale(.78) translate(-32 -32)">
+<rect x="11" y="16" width="42" height="32" rx="5" fill="none" stroke="#fff" stroke-width="2.8"/>
+<path d="M14 44l11-12 8 8 6-6 11 10" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="42" cy="26" r="4" fill="#fff"/></g>
 </svg>
