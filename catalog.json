@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-17T03:56:29Z",
+  "published": "2026-10-17T04:34:11Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -554,6 +554,94 @@
         "FOWNER",
         "SETUID",
         "SETGID"
+      ]
+    },
+    {
+      "id": "jellyfin",
+      "name": {
+        "fr": "Jellyfin",
+        "en": "Jellyfin"
+      },
+      "tagline": {
+        "fr": "Vos films, séries et musiques, sur tous vos écrans",
+        "en": "Your movies, shows and music, on every screen"
+      },
+      "description": {
+        "fr": "Un serveur multimédia personnel : il classe vos films, séries, musiques et photos du NAS, récupère les affiches et les résumés, et les diffuse sur la télé, le téléphone, la tablette ou le navigateur de toute la famille.\n\nComptes séparés pour chaque membre de la famille, reprise de lecture là où vous vous étiez arrêté, contrôle parental, sous-titres, applications pour la plupart des appareils. Aucun abonnement, aucune donnée envoyée à un tiers.\n\nMoteur Jellyfin (GPL-2.0), image officielle non modifiée. Desktroo n'est ni affilié ni soutenu par le projet Jellyfin.",
+        "en": "A personal media server: it sorts your NAS movies, shows, music and photos, fetches posters and summaries, and streams them to the TV, phone, tablet or browser of the whole family.\n\nSeparate accounts for each family member, resume playback where you left off, parental controls, subtitles, apps for most devices. No subscription, no data sent to a third party.\n\nJellyfin engine (GPL-2.0), unmodified official image. Desktroo is not affiliated with or endorsed by the Jellyfin project."
+      },
+      "category": "media",
+      "channel": "test",
+      "version": "1.0.0",
+      "min_desktroo": "2.54.19",
+      "image": "docker.io/jellyfin/jellyfin",
+      "tag": "12.2.0",
+      "digest": "sha256:357724bf0ae27a672c7cbaa899db2d9abeb13dbd8657ccce750258a4c059d037",
+      "port": 8080,
+      "health": "/health",
+      "sso": "header",
+      "run_as": "568:568",
+      "read_only": false,
+      "nas_access": {
+        "mode": "ro",
+        "why": {
+          "fr": "Il lit les dossiers de films, séries et musiques que vous choisissez, en lecture seule : vos fichiers ne sont jamais modifiés.",
+          "en": "It reads the movie, show and music folders you choose, read-only: your files are never modified."
+        }
+      },
+      "host_ports": [
+        {
+          "port": 8096,
+          "to": 8080,
+          "proto": "tcp",
+          "bind": "lan",
+          "label": {
+            "fr": "Interface (réseau local)",
+            "en": "Interface (local network)"
+          }
+        }
+      ],
+      "open_url": "http://{ip}:8096",
+      "network_why": {
+        "fr": "Il ouvre le port 8096 sur votre réseau local seulement : c'est l'adresse de Jellyfin pour vos appareils. Il ne s'ouvre jamais sur Internet.",
+        "en": "It opens port 8096 on your local network only: that is Jellyfin's address for your devices. It is never opened to the Internet."
+      },
+      "setup_note": {
+        "fr": "Ouvrez http://{ip}:8096 et suivez l'assistant : créez votre compte administrateur, puis ajoutez vos bibliothèques en choisissant les dossiers sous /nas (ceux que vous avez cochés pour cette app). Pour sauvegarder ou restaurer une configuration Jellyfin existante, arrêtez l'app dans Desktroo Apps avant de copier ses fichiers.\n\nNe redirigez pas le port 8096 sur votre box : pour regarder à l'extérieur, passez par le VPN ou par un domaine protégé. Le décodage vidéo par carte graphique n'est pas activé : les films sont décodés par le processeur.\n\nJellyfin peut annoncer qu'une nouvelle version existe : la mise à jour se fait dans Desktroo Apps (bouton « Mettre à jour »), pas depuis Jellyfin.",
+        "en": "Open http://{ip}:8096 and follow the wizard: create your administrator account, then add your libraries by choosing folders under /nas (the ones you ticked for this app). To back up or restore an existing Jellyfin configuration, stop the app in Desktroo Apps before copying its files.\n\nDo not forward port 8096 on your router: to watch from outside, use the VPN or a protected domain. Hardware video decoding is not enabled: movies are decoded by the processor.\n\nJellyfin may announce that a new version exists: update it in Desktroo Apps (“Update” button), not from Jellyfin."
+      },
+      "license": {
+        "name": "Jellyfin (GPL-2.0)",
+        "url": "https://github.com/jellyfin/jellyfin"
+      },
+      "env": {
+        "TZ": "@host",
+        "JELLYFIN_DATA_DIR": "/config",
+        "JELLYFIN_CONFIG_DIR": "/config/config",
+        "JELLYFIN_LOG_DIR": "/config/log",
+        "JELLYFIN_CACHE_DIR": "/cache"
+      },
+      "volumes": [
+        {
+          "name": "config",
+          "mount": "/config"
+        },
+        {
+          "name": "cache",
+          "mount": "/cache"
+        }
+      ],
+      "resources": {
+        "memory_mb": 4096,
+        "cpus": 4
+      },
+      "icon": "icons/jellyfin.svg",
+      "seed": [
+        {
+          "volume": "config",
+          "path": "config/network.xml",
+          "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<NetworkConfiguration xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n  <BaseUrl />\n  <EnableHttps>false</EnableHttps>\n  <RequireHttps>false</RequireHttps>\n  <InternalHttpPort>8080</InternalHttpPort>\n  <PublicHttpPort>8096</PublicHttpPort>\n  <AutoDiscovery>false</AutoDiscovery>\n  <EnableUPnP>false</EnableUPnP>\n</NetworkConfiguration>\n"
+        }
       ]
     }
   ]
