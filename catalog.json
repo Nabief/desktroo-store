@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-17T08:46:38Z",
+  "published": "2026-10-17T08:55:59Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -143,10 +143,10 @@
         "en": "Looks for malware in every folder of your NAS, with nothing to set up.\n\nScheduled or on-demand scans, nightly signature updates, reports. Dangerous files are quarantined by Desktroo: the antivirus itself cannot change anything.\n\nClamAV engine."
       },
       "category": "securite",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "min_desktroo": "2.49.0",
       "image": "ghcr.io/nabief/desktroo-antivirus",
-      "digest": "sha256:b4ab1b27ce7afadc0a932e282521450a272cd2cfa59a93032da84dd7d75605b7",
+      "digest": "sha256:1f1e43a478d362dcdbae1cd398ea5a5ab327fc5195d2fb39a95c6f5f3fec099c",
       "port": 8080,
       "health": "/healthz",
       "sso": "header",
