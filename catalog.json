@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-16T16:57:06Z",
+  "published": "2026-10-17T03:32:20Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -474,8 +474,8 @@
       },
       "category": "photos",
       "channel": "test",
-      "version": "1.0.2",
-      "min_desktroo": "2.54.17",
+      "version": "1.0.3",
+      "min_desktroo": "2.54.18",
       "image": "docker.io/photoprism/photoprism",
       "tag": "261007",
       "digest": "sha256:0f85369636ad99ca9a1c33f2d04df6c590802d16b7c33b4a1ea026b595be06d1",
