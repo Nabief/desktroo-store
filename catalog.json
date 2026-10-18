@@ -1,21 +1,24 @@
 {
   "schema": 1,
-  "published": "2026-10-18T00:10:18Z",
+  "published": "2026-10-18T16:48:35Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
       "id": "authenticator",
       "name": {
         "fr": "Authenticator",
-        "en": "Authenticator"
+        "en": "Authenticator",
+        "es": "Authenticator"
       },
       "tagline": {
         "fr": "Vos codes de double authentification, sur votre NAS",
-        "en": "Your 2FA codes, on your NAS"
+        "en": "Your 2FA codes, on your NAS",
+        "es": "Tus códigos de verificación en dos pasos, en tu NAS"
       },
       "description": {
         "fr": "Générez les codes à 6 chiffres de vos comptes protégés par double authentification.\n\nLe coffre est chiffré dans votre navigateur par votre mot de passe maître : même votre NAS ne voit pas vos codes. Un coffre par utilisateur, verrouillage automatique après 10 minutes.",
-        "en": "Generate the 6-digit codes of your two-factor accounts.\n\nThe vault is encrypted in your browser with your master password: even your NAS cannot see your codes. One vault per user, automatic lock after 10 minutes."
+        "en": "Generate the 6-digit codes of your two-factor accounts.\n\nThe vault is encrypted in your browser with your master password: even your NAS cannot see your codes. One vault per user, automatic lock after 10 minutes.",
+        "es": "Genera los códigos de 6 cifras de tus cuentas protegidas con verificación en dos pasos.\n\nLa caja fuerte se cifra en tu navegador con tu contraseña maestra: ni siquiera tu NAS ve tus códigos. Una caja fuerte por usuario, bloqueo automático a los 10 minutos."
       },
       "category": "securite",
       "version": "1.0.4",
@@ -51,15 +54,18 @@
       "kind": "module",
       "name": {
         "fr": "Serveur web",
-        "en": "Web server"
+        "en": "Web server",
+        "es": "Servidor web"
       },
       "tagline": {
         "fr": "Hébergez vos sites sur le NAS : PHP et MariaDB",
-        "en": "Host your websites on the NAS: PHP and MariaDB"
+        "en": "Host your websites on the NAS: PHP and MariaDB",
+        "es": "Aloja tus sitios en el NAS: PHP y MariaDB"
       },
       "description": {
         "fr": "Le serveur web de Desktroo : vos sites (WordPress, Nextcloud, PrestaShop…), PHP 8.3, 8.2, 8.1 et 7.4, et MariaDB pour les bases de données.\n\nIl ajoute la fenêtre « Sites Web » au bureau. Désinstallé, il n'occupe rien ; vos sites et vos bases restent sur le NAS.",
-        "en": "Desktroo's web server: your websites (WordPress, Nextcloud, PrestaShop…), PHP 8.3, 8.2, 8.1 and 7.4, and MariaDB for databases.\n\nIt adds the “Websites” window to the desktop. Uninstalled, it takes up nothing; your sites and databases stay on the NAS."
+        "en": "Desktroo's web server: your websites (WordPress, Nextcloud, PrestaShop…), PHP 8.3, 8.2, 8.1 and 7.4, and MariaDB for databases.\n\nIt adds the “Websites” window to the desktop. Uninstalled, it takes up nothing; your sites and databases stay on the NAS.",
+        "es": "El servidor web de Desktroo: tus sitios (WordPress, Nextcloud, PrestaShop…), PHP 8.3, 8.2, 8.1 y 7.4, y MariaDB para las bases de datos.\n\nAñade la ventana «Sitios web» al escritorio. Desinstalado, no ocupa nada; tus sitios y tus bases de datos se quedan en el NAS."
       },
       "category": "hebergement",
       "version": "1.0.0",
@@ -79,15 +85,18 @@
       "kind": "module",
       "name": {
         "fr": "NPMplus",
-        "en": "NPMplus"
+        "en": "NPMplus",
+        "es": "NPMplus"
       },
       "tagline": {
         "fr": "Vos sites en https, avec vos propres domaines",
-        "en": "Your sites over https, with your own domains"
+        "en": "Your sites over https, with your own domains",
+        "es": "Tus sitios en https, con tus propios dominios"
       },
       "description": {
         "fr": "Reverse-proxy NPMplus (logiciel libre) : il publie vos sites et vos apps sous vos noms de domaine, en https, avec des certificats Let's Encrypt renouvelés tout seuls.\n\nInstallé et mis à jour par Desktroo. Il écoute sur 8090 et 8453 pour laisser 80 et 443 à TrueNAS. Désinstallé, ses certificats et réglages restent sur le NAS.",
-        "en": "NPMplus reverse proxy (free software): publishes your sites and apps under your own domains, over https, with auto-renewed Let's Encrypt certificates.\n\nInstalled and updated by Desktroo. It listens on 8090 and 8453, leaving 80 and 443 to TrueNAS. Uninstalled, its certificates and settings stay on the NAS."
+        "en": "NPMplus reverse proxy (free software): publishes your sites and apps under your own domains, over https, with auto-renewed Let's Encrypt certificates.\n\nInstalled and updated by Desktroo. It listens on 8090 and 8453, leaving 80 and 443 to TrueNAS. Uninstalled, its certificates and settings stay on the NAS.",
+        "es": "Proxy inverso NPMplus (software libre): publica tus sitios y tus apps con tus nombres de dominio, en https, con certificados Let’s Encrypt que se renuevan solos.\n\nInstalado y actualizado por Desktroo. Escucha en 8090 y 8453 para dejar 80 y 443 a TrueNAS. Desinstalado, sus certificados y ajustes se quedan en el NAS."
       },
       "category": "reseau",
       "version": "1.0.0",
@@ -106,15 +115,18 @@
       "kind": "module",
       "name": {
         "fr": "Desktroo Pass",
-        "en": "Desktroo Pass"
+        "en": "Desktroo Pass",
+        "es": "Desktroo Pass"
       },
       "tagline": {
         "fr": "Vos mots de passe sur votre NAS, avec les applis Bitwarden",
-        "en": "Your passwords on your NAS, with the Bitwarden apps"
+        "en": "Your passwords on your NAS, with the Bitwarden apps",
+        "es": "Tus contraseñas en tu NAS, con las apps de Bitwarden"
       },
       "description": {
         "fr": "Un coffre de mots de passe pour toute la famille ou l'équipe, hébergé sur votre NAS.\n\nIl fonctionne avec les applis Bitwarden officielles et gratuites : remplissage automatique dans le navigateur, sur le téléphone et sur le PC. Chaque personne a son coffre, chiffré avec son propre mot de passe maître ; les comptes s'ouvrent sur invitation. Publié en https sous votre domaine grâce à NPMplus.\n\nBasé sur Vaultwarden (logiciel libre, AGPL-3.0), compatible Bitwarden ; non édité par Bitwarden, Inc.",
-        "en": "A password vault for the whole family or team, hosted on your NAS.\n\nIt works with the official, free Bitwarden apps: autofill in the browser, on the phone and on the PC. Everyone has their own vault, encrypted with their own master password; accounts open by invitation. Published over https under your domain through NPMplus.\n\nBuilt on Vaultwarden (free software, AGPL-3.0), Bitwarden-compatible; not published by Bitwarden, Inc."
+        "en": "A password vault for the whole family or team, hosted on your NAS.\n\nIt works with the official, free Bitwarden apps: autofill in the browser, on the phone and on the PC. Everyone has their own vault, encrypted with their own master password; accounts open by invitation. Published over https under your domain through NPMplus.\n\nBuilt on Vaultwarden (free software, AGPL-3.0), Bitwarden-compatible; not published by Bitwarden, Inc.",
+        "es": "Una caja fuerte de contraseñas para toda la familia o el equipo, alojada en tu NAS.\n\nFunciona con las apps oficiales y gratuitas de Bitwarden: autocompletado en el navegador, en el teléfono y en el PC. Cada persona tiene su caja fuerte, cifrada con su propia contraseña maestra; las cuentas se abren por invitación. Publicada en https con tu dominio gracias a NPMplus.\n\nBasada en Vaultwarden (software libre, AGPL-3.0), compatible con Bitwarden; no publicada por Bitwarden, Inc."
       },
       "category": "securite",
       "version": "1.0.0",
@@ -132,15 +144,18 @@
       "id": "antivirus",
       "name": {
         "fr": "Antivirus",
-        "en": "Antivirus"
+        "en": "Antivirus",
+        "es": "Antivirus"
       },
       "tagline": {
         "fr": "Analyse les dossiers de votre NAS",
-        "en": "Scans the folders of your NAS"
+        "en": "Scans the folders of your NAS",
+        "es": "Analiza las carpetas de tu NAS"
       },
       "description": {
         "fr": "Recherche les logiciels malveillants dans tous les dossiers de votre NAS, sans rien à régler.\n\nAnalyse planifiée la nuit ou à la demande, signatures mises à jour chaque nuit, rapports. Les fichiers dangereux sont mis en quarantaine par Desktroo : l'antivirus lui-même ne peut rien modifier.\n\nMoteur ClamAV.",
-        "en": "Looks for malware in every folder of your NAS, with nothing to set up.\n\nScheduled or on-demand scans, nightly signature updates, reports. Dangerous files are quarantined by Desktroo: the antivirus itself cannot change anything.\n\nClamAV engine."
+        "en": "Looks for malware in every folder of your NAS, with nothing to set up.\n\nScheduled or on-demand scans, nightly signature updates, reports. Dangerous files are quarantined by Desktroo: the antivirus itself cannot change anything.\n\nClamAV engine.",
+        "es": "Busca software malicioso en todas las carpetas de tu NAS, sin nada que configurar.\n\nAnálisis programado por la noche o a demanda, firmas actualizadas cada noche, informes. Desktroo pone en cuarentena los archivos peligrosos: el propio antivirus no puede modificar nada.\n\nMotor ClamAV."
       },
       "category": "securite",
       "version": "1.0.4",
@@ -155,7 +170,8 @@
         "mode": "all",
         "why": {
           "fr": "Il analyse tous les dossiers de votre NAS, en lecture seule.",
-          "en": "It scans every folder of your NAS, read-only."
+          "en": "It scans every folder of your NAS, read-only.",
+          "es": "Analiza todas las carpetas de tu NAS, en modo de solo lectura."
         }
       },
       "env": {
@@ -182,15 +198,18 @@
       "id": "adguard",
       "name": {
         "fr": "AdGuard Home",
-        "en": "AdGuard Home"
+        "en": "AdGuard Home",
+        "es": "AdGuard Home"
       },
       "tagline": {
         "fr": "Bloque publicités et traqueurs pour tout le réseau",
-        "en": "Blocks ads and trackers for your whole network"
+        "en": "Blocks ads and trackers for your whole network",
+        "es": "Bloquea anuncios y rastreadores en toda la red"
       },
       "description": {
         "fr": "Un serveur DNS qui filtre les publicités, les traqueurs et les sites dangereux pour tous les appareils de la maison ou du bureau : télévision, téléphones, ordinateurs, sans rien installer sur chacun.\n\nStatistiques, listes de blocage, règles par appareil. Prêt à l'emploi : il suffit d'indiquer l'adresse du NAS comme serveur DNS dans votre box.\n\nMoteur AdGuard Home (GPL-3.0), image officielle non modifiée.",
-        "en": "A DNS server that filters ads, trackers and dangerous sites for every device at home or at the office: TVs, phones, computers, with nothing to install on each.\n\nStatistics, block lists, per-device rules. Ready to use: just set the NAS address as the DNS server in your router.\n\nAdGuard Home engine (GPL-3.0), unmodified official image."
+        "en": "A DNS server that filters ads, trackers and dangerous sites for every device at home or at the office: TVs, phones, computers, with nothing to install on each.\n\nStatistics, block lists, per-device rules. Ready to use: just set the NAS address as the DNS server in your router.\n\nAdGuard Home engine (GPL-3.0), unmodified official image.",
+        "es": "Un servidor DNS que filtra los anuncios, los rastreadores y los sitios peligrosos para todos los dispositivos de casa o de la oficina: televisión, teléfonos, ordenadores, sin instalar nada en cada uno.\n\nEstadísticas, listas de bloqueo, reglas por dispositivo. Listo para usar: basta con indicar la dirección del NAS como servidor DNS en tu router.\n\nMotor AdGuard Home (GPL-3.0), imagen oficial sin modificar."
       },
       "category": "reseau",
       "version": "1.0.0",
@@ -211,17 +230,20 @@
           "proto": "both",
           "label": {
             "fr": "Serveur DNS",
-            "en": "DNS server"
+            "en": "DNS server",
+            "es": "Servidor DNS"
           }
         }
       ],
       "network_why": {
         "fr": "Il ouvre le port 53 (DNS) sur votre réseau : c'est ce qui permet aux appareils de lui poser leurs questions.",
-        "en": "It opens port 53 (DNS) on your network: that is how your devices send it their queries."
+        "en": "It opens port 53 (DNS) on your network: that is how your devices send it their queries.",
+        "es": "Abre el puerto 53 (DNS) en tu red: así es como los dispositivos le hacen sus consultas."
       },
       "setup_note": {
         "fr": "Pour filtrer tout le réseau, indiquez l'adresse de ce NAS ({ip}) comme serveur DNS dans votre box, à la place de celui de votre fournisseur. Un appareil seul peut aussi l'utiliser en réglant son DNS sur cette adresse.",
-        "en": "To filter your whole network, set this NAS ({ip}) as the DNS server in your router, in place of your provider's. A single device can also use it by setting its DNS to this address."
+        "en": "To filter your whole network, set this NAS ({ip}) as the DNS server in your router, in place of your provider's. A single device can also use it by setting its DNS to this address.",
+        "es": "Para filtrar toda la red, indica la dirección de este NAS ({ip}) como servidor DNS en tu router, en lugar del de tu proveedor. Un solo dispositivo también puede usarlo configurando su DNS con esta dirección."
       },
       "license": {
         "name": "AdGuard Home (GPL-3.0)",
@@ -262,15 +284,18 @@
       "id": "wireguard",
       "name": {
         "fr": "VPN (WireGuard)",
-        "en": "VPN (WireGuard)"
+        "en": "VPN (WireGuard)",
+        "es": "VPN (WireGuard)"
       },
       "tagline": {
         "fr": "Rejoignez votre réseau depuis l'extérieur, en sécurité",
-        "en": "Reach your network from anywhere, securely"
+        "en": "Reach your network from anywhere, securely",
+        "es": "Conéctate a tu red desde fuera, con seguridad"
       },
       "description": {
         "fr": "Un VPN personnel : depuis votre téléphone ou votre ordinateur, où que vous soyez, vous retrouvez votre NAS et votre réseau comme si vous étiez à la maison.\n\nChaque appareil a sa propre clé, qu'on active ou retire à tout moment ; l'ajout se fait en scannant un QR code.\n\nMoteur wg-easy (AGPL-3.0), image officielle non modifiée, avec le protocole WireGuard. WireGuard® est une marque déposée de Jason A. Donenfeld ; Desktroo n'est ni affilié ni soutenu par le projet WireGuard.",
-        "en": "A personal VPN: from your phone or computer, wherever you are, you reach your NAS and your network as if you were at home.\n\nEach device has its own key, which you can enable or remove at any time; adding one is a QR code scan.\n\nwg-easy engine (AGPL-3.0), unmodified official image, using the WireGuard protocol. WireGuard® is a registered trademark of Jason A. Donenfeld; Desktroo is not affiliated with or endorsed by the WireGuard project."
+        "en": "A personal VPN: from your phone or computer, wherever you are, you reach your NAS and your network as if you were at home.\n\nEach device has its own key, which you can enable or remove at any time; adding one is a QR code scan.\n\nwg-easy engine (AGPL-3.0), unmodified official image, using the WireGuard protocol. WireGuard® is a registered trademark of Jason A. Donenfeld; Desktroo is not affiliated with or endorsed by the WireGuard project.",
+        "es": "Una VPN personal: desde tu teléfono o tu ordenador, estés donde estés, accedes a tu NAS y a tu red como si estuvieras en casa.\n\nCada dispositivo tiene su propia clave, que puedes activar o quitar en cualquier momento; para añadir uno basta con escanear un código QR.\n\nMotor wg-easy (AGPL-3.0), imagen oficial sin modificar, con el protocolo WireGuard. WireGuard® es una marca registrada de Jason A. Donenfeld; Desktroo no está afiliado al proyecto WireGuard ni cuenta con su respaldo."
       },
       "category": "reseau",
       "version": "1.0.4",
@@ -305,7 +330,8 @@
           "bind": "all",
           "label": {
             "fr": "VPN WireGuard",
-            "en": "WireGuard VPN"
+            "en": "WireGuard VPN",
+            "es": "VPN WireGuard"
           }
         },
         {
@@ -315,17 +341,20 @@
           "bind": "lan",
           "label": {
             "fr": "Administration (réseau local)",
-            "en": "Administration (local network)"
+            "en": "Administration (local network)",
+            "es": "Administración (red local)"
           }
         }
       ],
       "network_why": {
         "fr": "Il ouvre le port 51820 (UDP) : c'est par lui que vos appareils se connectent de l'extérieur. Il ouvre aussi le port 51821 (administration) sur votre réseau local seulement. Il demande enfin des droits réseau étendus (créer l'interface VPN et transférer le trafic), que l'app n'utilise que pour cela.",
-        "en": "It opens port 51820 (UDP): that is how your devices connect from outside. It also opens port 51821 (administration) on your local network only. Finally it needs extended network rights (to create the VPN interface and forward traffic), which it uses for nothing else."
+        "en": "It opens port 51820 (UDP): that is how your devices connect from outside. It also opens port 51821 (administration) on your local network only. Finally it needs extended network rights (to create the VPN interface and forward traffic), which it uses for nothing else.",
+        "es": "Abre el puerto 51820 (UDP): por él se conectan tus dispositivos desde fuera. También abre el puerto 51821 (administración), solo en tu red local. Por último, pide permisos de red ampliados (crear la interfaz VPN y reenviar el tráfico), que la app solo usa para eso."
       },
       "setup_note": {
         "fr": "Dans votre box, redirigez le port 51820 en UDP vers ce NAS ({ip}). Ne redirigez jamais le port 51821 : l'administration se fait depuis votre réseau local, à l'adresse http://{ip}:51821, avec le compte indiqué plus bas. Ajoutez ensuite un appareil et scannez son QR code avec l'application WireGuard de votre téléphone.",
-        "en": "In your router, forward UDP port 51820 to this NAS ({ip}). Never forward port 51821: administration is done from your local network, at http://{ip}:51821, with the account shown below. Then add a device and scan its QR code with the WireGuard app on your phone."
+        "en": "In your router, forward UDP port 51820 to this NAS ({ip}). Never forward port 51821: administration is done from your local network, at http://{ip}:51821, with the account shown below. Then add a device and scan its QR code with the WireGuard app on your phone.",
+        "es": "En tu router, redirige el puerto 51820 en UDP a este NAS ({ip}). No redirijas nunca el puerto 51821: la administración se hace desde tu red local, en http://{ip}:51821, con la cuenta indicada más abajo. Después añade un dispositivo y escanea su código QR con la app WireGuard de tu teléfono."
       },
       "install_fields": [
         {
@@ -335,12 +364,14 @@
           "required": true,
           "label": {
             "fr": "Adresse publique de votre box",
-            "en": "Public address of your router"
+            "en": "Public address of your router",
+            "es": "Dirección pública de tu router"
           },
           "placeholder": "vpn.mondomaine.fr",
           "help": {
             "fr": "Le nom de domaine (ou l'adresse IP) que vos appareils utiliseront pour joindre votre box depuis l'extérieur. Il est inscrit dans la configuration de chaque appareil.",
-            "en": "The domain name (or IP address) your devices will use to reach your router from outside. It is written into each device's configuration."
+            "en": "The domain name (or IP address) your devices will use to reach your router from outside. It is written into each device's configuration.",
+            "es": "El nombre de dominio (o la dirección IP) que usarán tus dispositivos para llegar a tu router desde fuera. Se escribe en la configuración de cada dispositivo."
           }
         }
       ],
@@ -383,15 +414,18 @@
       "id": "uptime-kuma",
       "name": {
         "fr": "Uptime Kuma",
-        "en": "Uptime Kuma"
+        "en": "Uptime Kuma",
+        "es": "Uptime Kuma"
       },
       "tagline": {
         "fr": "Surveille vos sites et services, et vous prévient en cas de panne",
-        "en": "Watches your sites and services, and alerts you when something goes down"
+        "en": "Watches your sites and services, and alerts you when something goes down",
+        "es": "Vigila tus sitios y servicios, y te avisa si algo falla"
       },
       "description": {
         "fr": "Vérifie en continu que vos sites web, serveurs, applications et appareils répondent bien, et vous prévient dès qu'un service tombe, par e-mail, Telegram, SMS ou une centaine d'autres moyens.\n\nTableau de bord en temps réel, historique de disponibilité, pages d'état publiques à partager avec vos clients, vérifications toutes les 20 secondes.\n\nMoteur Uptime Kuma (MIT), image officielle non modifiée. Desktroo n'est ni affilié ni soutenu par le projet Uptime Kuma.",
-        "en": "Continuously checks that your websites, servers, apps and devices respond, and alerts you as soon as a service goes down, by email, Telegram, SMS or a hundred other ways.\n\nReal-time dashboard, availability history, public status pages to share with your customers, checks every 20 seconds.\n\nUptime Kuma engine (MIT), unmodified official image. Desktroo is not affiliated with or endorsed by the Uptime Kuma project."
+        "en": "Continuously checks that your websites, servers, apps and devices respond, and alerts you as soon as a service goes down, by email, Telegram, SMS or a hundred other ways.\n\nReal-time dashboard, availability history, public status pages to share with your customers, checks every 20 seconds.\n\nUptime Kuma engine (MIT), unmodified official image. Desktroo is not affiliated with or endorsed by the Uptime Kuma project.",
+        "es": "Comprueba continuamente que tus sitios web, servidores, aplicaciones y dispositivos responden, y te avisa en cuanto un servicio cae, por correo electrónico, Telegram, SMS o un centenar de medios más.\n\nPanel en tiempo real, historial de disponibilidad, páginas de estado públicas para compartir con tus clientes, comprobaciones cada 20 segundos.\n\nMotor Uptime Kuma (MIT), imagen oficial sin modificar. Desktroo no está afiliado al proyecto Uptime Kuma ni cuenta con su respaldo."
       },
       "category": "supervision",
       "version": "1.0.2",
@@ -412,18 +446,21 @@
           "bind": "lan",
           "label": {
             "fr": "Interface (réseau local)",
-            "en": "Interface (local network)"
+            "en": "Interface (local network)",
+            "es": "Interfaz (red local)"
           }
         }
       ],
       "open_url": "http://{ip}:3001",
       "network_why": {
         "fr": "Il ouvre le port 3001 sur votre réseau local seulement : c'est l'adresse de son interface. Il ne s'ouvre jamais sur Internet.",
-        "en": "It opens port 3001 on your local network only: that is the address of its interface. It is never opened to the Internet."
+        "en": "It opens port 3001 on your local network only: that is the address of its interface. It is never opened to the Internet.",
+        "es": "Abre el puerto 3001 solo en tu red local: es la dirección de su interfaz. Nunca se abre a Internet."
       },
       "setup_note": {
         "fr": "À la première ouverture, http://{ip}:3001, créez votre compte administrateur (la base de données est déjà réglée). Ne redirigez pas le port 3001 sur votre box : si vous voulez le joindre de l'extérieur, passez par le VPN ou par un domaine protégé.\n\nUptime Kuma peut annoncer qu'une nouvelle version existe : la mise à jour se fait dans Desktroo Apps (bouton « Mettre à jour »), pas depuis Kuma.",
-        "en": "On first opening, http://{ip}:3001, create your administrator account (the database is already set up). Do not forward port 3001 on your router: to reach it from outside, use the VPN or a protected domain.\n\nUptime Kuma may announce that a new version exists: the update is done in Desktroo Apps (“Update” button), not from Kuma."
+        "en": "On first opening, http://{ip}:3001, create your administrator account (the database is already set up). Do not forward port 3001 on your router: to reach it from outside, use the VPN or a protected domain.\n\nUptime Kuma may announce that a new version exists: the update is done in Desktroo Apps (“Update” button), not from Kuma.",
+        "es": "La primera vez que la abras, en http://{ip}:3001, crea tu cuenta de administrador (la base de datos ya está configurada). No redirijas el puerto 3001 en tu router: si quieres acceder desde fuera, usa la VPN o un dominio protegido.\n\nUptime Kuma puede avisar de que hay una nueva versión: la actualización se hace en Desktroo Apps (botón «Actualizar»), no desde Kuma."
       },
       "license": {
         "name": "Uptime Kuma (MIT)",
@@ -462,15 +499,18 @@
       "id": "photoprism",
       "name": {
         "fr": "PhotoPrism",
-        "en": "PhotoPrism"
+        "en": "PhotoPrism",
+        "es": "PhotoPrism"
       },
       "tagline": {
         "fr": "Vos photos classées et cherchables, sans le cloud",
-        "en": "Your photos sorted and searchable, no cloud"
+        "en": "Your photos sorted and searchable, no cloud",
+        "es": "Tus fotos ordenadas y fáciles de buscar, sin la nube"
       },
       "description": {
         "fr": "Une photothèque pour parcourir vos photos et vidéos du NAS comme sur un téléphone : albums, carte, recherche par lieu, date, couleur ou contenu, reconnaissance des visages.\n\nIl lit vos dossiers existants en lecture seule : vos originaux ne sont jamais modifiés ni déplacés. Tout le classement reste sur votre NAS, rien n'est envoyé à l'extérieur.\n\nMoteur PhotoPrism (AGPL-3.0), image officielle non modifiée. Le premier indexage peut durer plusieurs heures si la photothèque est grande.",
-        "en": "A photo library to browse your NAS photos and videos like on a phone: albums, map, search by place, date, colour or content, face recognition.\n\nIt reads your existing folders read-only: your originals are never modified or moved. All the sorting stays on your NAS, nothing is sent outside.\n\nPhotoPrism engine (AGPL-3.0), unmodified official image. The first indexing can take several hours for a large library."
+        "en": "A photo library to browse your NAS photos and videos like on a phone: albums, map, search by place, date, colour or content, face recognition.\n\nIt reads your existing folders read-only: your originals are never modified or moved. All the sorting stays on your NAS, nothing is sent outside.\n\nPhotoPrism engine (AGPL-3.0), unmodified official image. The first indexing can take several hours for a large library.",
+        "es": "Una fototeca para recorrer las fotos y vídeos de tu NAS como en un teléfono: álbumes, mapa, búsqueda por lugar, fecha, color o contenido, reconocimiento de caras.\n\nLee tus carpetas existentes en modo de solo lectura: tus originales nunca se modifican ni se mueven. Toda la organización se queda en tu NAS, no se envía nada fuera.\n\nMotor PhotoPrism (AGPL-3.0), imagen oficial sin modificar. La primera indexación puede durar varias horas si la fototeca es grande."
       },
       "category": "photos",
       "channel": "test",
@@ -488,7 +528,8 @@
         "mode": "ro",
         "why": {
           "fr": "Il lit les dossiers de photos que vous choisissez, en lecture seule : vos originaux ne sont jamais modifiés.",
-          "en": "It reads the photo folders you choose, read-only: your originals are never modified."
+          "en": "It reads the photo folders you choose, read-only: your originals are never modified.",
+          "es": "Lee las carpetas de fotos que elijas, en modo de solo lectura: tus originales nunca se modifican."
         }
       },
       "credentials": {
@@ -503,14 +544,16 @@
           "bind": "lan",
           "label": {
             "fr": "Interface (réseau local)",
-            "en": "Interface (local network)"
+            "en": "Interface (local network)",
+            "es": "Interfaz (red local)"
           }
         }
       ],
       "open_url": "http://{ip}:2342",
       "setup_note": {
         "fr": "Ouvrez http://{ip}:2342 et connectez-vous avec l'identifiant et le mot de passe affichés sur cette fiche. L'indexage démarre depuis le menu Bibliothèque > Indexer : choisissez un dossier de photos précis, pas « Originaux » ni la racine de votre NAS. Il peut prendre du temps et utiliser beaucoup le processeur la première fois.\n\nLe mot de passe affiché n'est valable que tant que vous ne l'avez pas changé dans PhotoPrism. Ne redirigez pas le port 2342 sur votre box : pour y accéder de l'extérieur, passez par le VPN.",
-        "en": "Open http://{ip}:2342 and sign in with the username and password shown on this page. Indexing starts from Library > Index: pick a specific photo folder, not “Originals” nor the root of your NAS. The first run can take a while and use a lot of CPU.\n\nThe displayed password is only valid until you change it in PhotoPrism. Do not forward port 2342 on your router: to reach it from outside, use the VPN."
+        "en": "Open http://{ip}:2342 and sign in with the username and password shown on this page. Indexing starts from Library > Index: pick a specific photo folder, not “Originals” nor the root of your NAS. The first run can take a while and use a lot of CPU.\n\nThe displayed password is only valid until you change it in PhotoPrism. Do not forward port 2342 on your router: to reach it from outside, use the VPN.",
+        "es": "Abre http://{ip}:2342 e inicia sesión con el usuario y la contraseña que aparecen en esta ficha. La indexación se inicia desde el menú Biblioteca > Indexar: elige una carpeta de fotos concreta, no «Originales» ni la raíz de tu NAS. La primera vez puede tardar y usar mucho el procesador.\n\nLa contraseña mostrada solo es válida mientras no la cambies en PhotoPrism. No redirijas el puerto 2342 en tu router: para acceder desde fuera, usa la VPN."
       },
       "license": {
         "name": "PhotoPrism (AGPL-3.0)",
@@ -560,15 +603,18 @@
       "id": "jellyfin",
       "name": {
         "fr": "Jellyfin",
-        "en": "Jellyfin"
+        "en": "Jellyfin",
+        "es": "Jellyfin"
       },
       "tagline": {
         "fr": "Vos films, séries et musiques, sur tous vos écrans",
-        "en": "Your movies, shows and music, on every screen"
+        "en": "Your movies, shows and music, on every screen",
+        "es": "Tus películas, series y música, en todas tus pantallas"
       },
       "description": {
         "fr": "Un serveur multimédia personnel : il classe vos films, séries, musiques et photos du NAS, récupère les affiches et les résumés, et les diffuse sur la télé, le téléphone, la tablette ou le navigateur de toute la famille.\n\nComptes séparés pour chaque membre de la famille, reprise de lecture là où vous vous étiez arrêté, contrôle parental, sous-titres, applications pour la plupart des appareils. Aucun abonnement, aucune donnée envoyée à un tiers.\n\nMoteur Jellyfin (GPL-2.0), image officielle non modifiée. Desktroo n'est ni affilié ni soutenu par le projet Jellyfin.",
-        "en": "A personal media server: it sorts your NAS movies, shows, music and photos, fetches posters and summaries, and streams them to the TV, phone, tablet or browser of the whole family.\n\nSeparate accounts for each family member, resume playback where you left off, parental controls, subtitles, apps for most devices. No subscription, no data sent to a third party.\n\nJellyfin engine (GPL-2.0), unmodified official image. Desktroo is not affiliated with or endorsed by the Jellyfin project."
+        "en": "A personal media server: it sorts your NAS movies, shows, music and photos, fetches posters and summaries, and streams them to the TV, phone, tablet or browser of the whole family.\n\nSeparate accounts for each family member, resume playback where you left off, parental controls, subtitles, apps for most devices. No subscription, no data sent to a third party.\n\nJellyfin engine (GPL-2.0), unmodified official image. Desktroo is not affiliated with or endorsed by the Jellyfin project.",
+        "es": "Un servidor multimedia personal: organiza las películas, series, música y fotos de tu NAS, descarga los carteles y las sinopsis, y los reproduce en la televisión, el teléfono, la tableta o el navegador de toda la familia.\n\nCuentas separadas para cada miembro de la familia, reanudación donde lo dejaste, control parental, subtítulos, apps para la mayoría de los dispositivos. Sin suscripción, sin datos enviados a terceros.\n\nMotor Jellyfin (GPL-2.0), imagen oficial sin modificar. Desktroo no está afiliado al proyecto Jellyfin ni cuenta con su respaldo."
       },
       "category": "media",
       "version": "1.1.0",
@@ -585,7 +631,8 @@
         "mode": "ro",
         "why": {
           "fr": "Il lit les dossiers de films, séries et musiques que vous choisissez, en lecture seule : vos fichiers ne sont jamais modifiés.",
-          "en": "It reads the movie, show and music folders you choose, read-only: your files are never modified."
+          "en": "It reads the movie, show and music folders you choose, read-only: your files are never modified.",
+          "es": "Lee las carpetas de películas, series y música que elijas, en modo de solo lectura: tus archivos nunca se modifican."
         }
       },
       "host_ports": [
@@ -596,18 +643,21 @@
           "bind": "lan",
           "label": {
             "fr": "Interface (réseau local)",
-            "en": "Interface (local network)"
+            "en": "Interface (local network)",
+            "es": "Interfaz (red local)"
           }
         }
       ],
       "open_url": "http://{ip}:8096",
       "network_why": {
         "fr": "Il ouvre le port 8096 sur votre réseau local seulement : c'est l'adresse de Jellyfin pour vos appareils. Il ne s'ouvre jamais sur Internet.",
-        "en": "It opens port 8096 on your local network only: that is Jellyfin's address for your devices. It is never opened to the Internet."
+        "en": "It opens port 8096 on your local network only: that is Jellyfin's address for your devices. It is never opened to the Internet.",
+        "es": "Abre el puerto 8096 solo en tu red local: es la dirección de Jellyfin para tus dispositivos. Nunca se abre a Internet."
       },
       "setup_note": {
         "fr": "Jellyfin est déjà prêt : Desktroo a créé le compte administrateur avec l'identifiant et le mot de passe affichés sur cette fiche, et sauté l'assistant. Ouvrez la fenêtre Jellyfin de Desktroo pour ajouter vos bibliothèques (films, séries, musiques) en choisissant des dossiers de votre NAS, créer les comptes de la famille avec une limite d'âge et suivre l'analyse.\n\nPour regarder, utilisez l'application Jellyfin de votre télévision, téléphone ou ordinateur, ou http://{ip}:8096 dans un navigateur, avec le compte de chaque personne. Pour restaurer une configuration Jellyfin existante, arrêtez l'app dans Desktroo Apps avant de copier ses fichiers.\n\nNe redirigez pas le port 8096 sur votre box : pour regarder à l'extérieur, passez par le VPN ou par un domaine protégé. Le décodage vidéo par carte graphique n'est pas activé : les films sont décodés par le processeur.\n\nLa mise à jour de Jellyfin se fait dans Desktroo Apps (bouton « Mettre à jour »), pas depuis Jellyfin.",
-        "en": "Jellyfin is already set up: Desktroo created the administrator account with the username and password shown on this page, and skipped the wizard. Open Desktroo's Jellyfin window to add your libraries (movies, shows, music) by choosing folders on your NAS, create family accounts with an age limit, and follow the scan.\n\nTo watch, use the Jellyfin app on your TV, phone or computer, or http://{ip}:8096 in a browser, with each person's own account. To restore an existing Jellyfin configuration, stop the app in Desktroo Apps before copying its files.\n\nDo not forward port 8096 on your router: to watch from outside, use the VPN or a protected domain. Hardware video decoding is not enabled: movies are decoded by the processor.\n\nJellyfin is updated in Desktroo Apps (“Update” button), not from Jellyfin."
+        "en": "Jellyfin is already set up: Desktroo created the administrator account with the username and password shown on this page, and skipped the wizard. Open Desktroo's Jellyfin window to add your libraries (movies, shows, music) by choosing folders on your NAS, create family accounts with an age limit, and follow the scan.\n\nTo watch, use the Jellyfin app on your TV, phone or computer, or http://{ip}:8096 in a browser, with each person's own account. To restore an existing Jellyfin configuration, stop the app in Desktroo Apps before copying its files.\n\nDo not forward port 8096 on your router: to watch from outside, use the VPN or a protected domain. Hardware video decoding is not enabled: movies are decoded by the processor.\n\nJellyfin is updated in Desktroo Apps (“Update” button), not from Jellyfin.",
+        "es": "Jellyfin ya está listo: Desktroo ha creado la cuenta de administrador con el usuario y la contraseña que aparecen en esta ficha, y se ha saltado el asistente. Abre la ventana Jellyfin de Desktroo para añadir tus bibliotecas (películas, series, música) eligiendo carpetas de tu NAS, crear las cuentas de la familia con un límite de edad y seguir el análisis.\n\nPara ver, usa la app Jellyfin de tu televisión, teléfono u ordenador, o http://{ip}:8096 en un navegador, con la cuenta de cada persona. Para restaurar una configuración de Jellyfin existente, detén la app en Desktroo Apps antes de copiar sus archivos.\n\nNo redirijas el puerto 8096 en tu router: para ver desde fuera, usa la VPN o un dominio protegido. La decodificación de vídeo por tarjeta gráfica no está activada: las películas las decodifica el procesador.\n\nJellyfin se actualiza en Desktroo Apps (botón «Actualizar»), no desde Jellyfin."
       },
       "license": {
         "name": "Jellyfin (GPL-2.0)",
@@ -647,6 +697,95 @@
         "user": "admin",
         "derive": "jellyfin"
       }
+    },
+    {
+      "id": "onlyoffice",
+      "name": {
+        "fr": "OnlyOffice",
+        "en": "OnlyOffice",
+        "es": "OnlyOffice"
+      },
+      "tagline": {
+        "fr": "Textes, tableurs et présentations, dans votre bureau",
+        "en": "Documents, spreadsheets and presentations, on your desktop",
+        "es": "Textos, hojas de cálculo y presentaciones, en tu escritorio"
+      },
+      "description": {
+        "fr": "Ouvrez et modifiez vos documents Word, Excel et PowerPoint (et OpenDocument) directement dans les fenêtres de Desktroo : un double-clic sur le fichier dans Fichiers suffit. Chaque document s'enregistre tout seul sur le NAS, et plusieurs personnes peuvent travailler sur le même en même temps.\n\nVos documents restent sur votre NAS : ni compte en ligne, ni cloud.\n\nMoteur ONLYOFFICE Docs (AGPL-3.0), image officielle non modifiée. Il demande 4 Go de mémoire. ONLYOFFICE est une marque d'Ascensio System SIA ; Desktroo n'est pas affilié au projet ONLYOFFICE et n'est pas approuvé par lui.",
+        "en": "Open and edit your Word, Excel and PowerPoint documents (and OpenDocument files) right in Desktroo's windows: just double-click the file in Files. Every document saves itself to the NAS, and several people can work on the same one at the same time.\n\nYour documents stay on your NAS: no online account, no cloud.\n\nONLYOFFICE Docs engine (AGPL-3.0), official image, unmodified. It needs 4 GB of memory. ONLYOFFICE is a trademark of Ascensio System SIA; Desktroo is not affiliated with or endorsed by the ONLYOFFICE project.",
+        "es": "Abre y edita tus documentos de Word, Excel y PowerPoint (y archivos OpenDocument) directamente en las ventanas de Desktroo: basta con hacer doble clic en el archivo en Archivos. Cada documento se guarda solo en el NAS, y varias personas pueden trabajar en el mismo a la vez.\n\nTus documentos se quedan en tu NAS: sin cuenta en línea ni nube.\n\nMotor ONLYOFFICE Docs (AGPL-3.0), imagen oficial sin modificar. Necesita 4 GB de memoria. ONLYOFFICE es una marca registrada de Ascensio System SIA; Desktroo no está afiliado al proyecto ONLYOFFICE ni cuenta con su respaldo."
+      },
+      "setup_note": {
+        "fr": "Le premier démarrage prend une à deux minutes. Ensuite, double-cliquez sur un document dans Fichiers, ou ouvrez l'app OnlyOffice du bureau pour créer un document, un classeur ou une présentation.",
+        "en": "The first start takes one or two minutes. Then double-click a document in Files, or open the OnlyOffice app on the desktop to create a document, a spreadsheet or a presentation.",
+        "es": "El primer arranque tarda uno o dos minutos. Después, haz doble clic en un documento en Archivos, o abre la app OnlyOffice del escritorio para crear un documento, una hoja de cálculo o una presentación."
+      },
+      "category": "bureautique",
+      "channel": "test",
+      "version": "1.0.0",
+      "min_desktroo": "2.60.0",
+      "image": "docker.io/onlyoffice/documentserver",
+      "tag": "10.0.0.1",
+      "digest": "sha256:ca17889f10b11141cc6441836aebdd2835cf3e1b49681b2fd6e155c94b7850b3",
+      "port": 80,
+      "health": "/healthcheck",
+      "health_wait": 600,
+      "sso": "header",
+      "run_as": "0:0",
+      "read_only": false,
+      "tmpfs": false,
+      "license": {
+        "name": "ONLYOFFICE Docs (AGPL-3.0)",
+        "url": "https://github.com/ONLYOFFICE/DocumentServer"
+      },
+      "env": {
+        "JWT_ENABLED": "true",
+        "JWT_SECRET": "@derive:jwt",
+        "JWT_HEADER": "Authorization",
+        "JWT_IN_BODY": "true",
+        "ALLOW_PRIVATE_IP_ADDRESS": "true",
+        "WOPI_ENABLED": "false",
+        "PLUGINS_ENABLED": "false"
+      },
+      "volumes": [
+        {
+          "name": "data",
+          "mount": "/var/www/onlyoffice/Data"
+        },
+        {
+          "name": "cache",
+          "mount": "/var/lib/onlyoffice",
+          "keep_owner": true
+        },
+        {
+          "name": "db",
+          "mount": "/var/lib/postgresql",
+          "keep_owner": true
+        }
+      ],
+      "resources": {
+        "memory_mb": 4096,
+        "cpus": 2
+      },
+      "cap_add": [
+        "CHOWN",
+        "DAC_OVERRIDE",
+        "FOWNER",
+        "FSETID",
+        "KILL",
+        "SETGID",
+        "SETUID",
+        "SETPCAP",
+        "SETFCAP",
+        "NET_BIND_SERVICE",
+        "SYS_CHROOT",
+        "AUDIT_WRITE"
+      ],
+      "window": {
+        "width": 900,
+        "height": 620
+      },
+      "icon": "icons/onlyoffice.svg"
     }
   ]
 }
