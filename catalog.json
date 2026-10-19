@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-19T18:50:28Z",
+  "published": "2026-10-19T19:00:28Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -298,7 +298,6 @@
         "es": "Un servidor DNS que filtra los anuncios, los rastreadores y los sitios peligrosos para todos los dispositivos de casa o de la oficina, sin instalar nada en cada uno.\n\nEstadísticas, registro de consultas, listas de bloqueo, sitios permitidos o bloqueados. Listo para usar: basta con indicar la dirección del NAS como servidor DNS en tu router.\n\n¿Ya tienes un Pi-hole en otra máquina (Raspberry Pi, VM)? Puedes vincularlo: la misma ventana lo controla a distancia.\n\nMotor Pi-hole (EUPL-1.2), imagen oficial sin modificar. Pi-hole es una marca de Pi-hole LLC; Desktroo no está afiliado al proyecto Pi-hole ni cuenta con su respaldo."
       },
       "category": "reseau",
-      "channel": "test",
       "version": "1.0.0",
       "min_desktroo": "2.60.10",
       "image": "docker.io/pihole/pihole",
