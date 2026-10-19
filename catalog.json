@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-19T11:32:11Z",
+  "published": "2026-10-19T11:46:11Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -809,7 +809,6 @@
       },
       "category": "bureautique",
       "version": "1.0.0",
-      "channel": "test",
       "min_desktroo": "2.60.5",
       "image": "ghcr.io/nabief/desktroo-sms",
       "digest": "sha256:cd850ded18642c396b946d2692cbe8e60d168d1ffa8b1e42f7086f1486603fe5",
