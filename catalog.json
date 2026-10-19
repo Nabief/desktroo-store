@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-19T11:46:11Z",
+  "published": "2026-10-19T15:40:18Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -808,10 +808,10 @@
         "es": "Envía SMS a uno o varios destinatarios desde tu escritorio, con tus créditos de OVHcloud: contador de caracteres y estimación de créditos, elección del remitente, mención STOP para los envíos comerciales, historial de envíos.\n\nRecibe también las alertas del NAS por SMS (disco averiado, espacio casi lleno…), por OVHcloud o, para los abonados de Free Mobile, gratis en tu propio número. En la configuración de alertas de Desktroo, «SMS» pasa a ser un servicio de alertas.\n\nTus claves se quedan en tu NAS: nunca se devuelven al navegador."
       },
       "category": "bureautique",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "min_desktroo": "2.60.5",
       "image": "ghcr.io/nabief/desktroo-sms",
-      "digest": "sha256:cd850ded18642c396b946d2692cbe8e60d168d1ffa8b1e42f7086f1486603fe5",
+      "digest": "sha256:2d47c0ce2a318510a608f364841602dd75c53908ef9531995142c52e913db37a",
       "port": 8080,
       "health": "/healthz",
       "sso": "header",
