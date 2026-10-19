@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-19T06:49:13Z",
+  "published": "2026-10-19T11:32:11Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -789,6 +789,72 @@
         "default": true,
         "minutes": 15
       }
+    },
+    {
+      "id": "sms",
+      "name": {
+        "fr": "SMS",
+        "en": "SMS",
+        "es": "SMS"
+      },
+      "tagline": {
+        "fr": "Envoyez des SMS, recevez les alertes du NAS par SMS",
+        "en": "Send text messages, get your NAS alerts by text",
+        "es": "Envía SMS y recibe las alertas del NAS por SMS"
+      },
+      "description": {
+        "fr": "Envoyez des SMS à un ou plusieurs destinataires depuis votre bureau, avec vos crédits OVHcloud : compteur de caractères et estimation des crédits, choix de l'expéditeur, mention STOP pour les envois commerciaux, historique des envois.\n\nRecevez aussi les alertes du NAS par SMS (disque en panne, espace presque plein…), par OVHcloud ou, pour les abonnés Free Mobile, gratuitement sur votre propre numéro. Dans la configuration des alertes de Desktroo, « SMS » devient un service d'alerte.\n\nVos clés restent sur votre NAS : elles ne sont jamais renvoyées au navigateur.",
+        "en": "Send text messages to one or more recipients from your desktop, using your OVHcloud credits: character counter and credit estimate, sender choice, STOP notice for marketing messages, sending history.\n\nAlso get your NAS alerts by text (failed disk, space almost full…), through OVHcloud or, for Free Mobile subscribers, for free on your own number. In Desktroo's alert configuration, “SMS” becomes an alert service.\n\nYour keys stay on your NAS: they are never sent back to the browser.",
+        "es": "Envía SMS a uno o varios destinatarios desde tu escritorio, con tus créditos de OVHcloud: contador de caracteres y estimación de créditos, elección del remitente, mención STOP para los envíos comerciales, historial de envíos.\n\nRecibe también las alertas del NAS por SMS (disco averiado, espacio casi lleno…), por OVHcloud o, para los abonados de Free Mobile, gratis en tu propio número. En la configuración de alertas de Desktroo, «SMS» pasa a ser un servicio de alertas.\n\nTus claves se quedan en tu NAS: nunca se devuelven al navegador."
+      },
+      "category": "bureautique",
+      "version": "1.0.0",
+      "channel": "test",
+      "min_desktroo": "2.60.5",
+      "image": "ghcr.io/nabief/desktroo-sms",
+      "digest": "sha256:cd850ded18642c396b946d2692cbe8e60d168d1ffa8b1e42f7086f1486603fe5",
+      "port": 8080,
+      "health": "/healthz",
+      "sso": "header",
+      "run_as": "568:568",
+      "host_ports": [
+        {
+          "port": 8135,
+          "to": 8081,
+          "proto": "tcp",
+          "bind": "lan",
+          "label": {
+            "fr": "Réception des alertes du NAS (réseau local)",
+            "en": "NAS alerts reception (local network)",
+            "es": "Recepción de las alertas del NAS (red local)"
+          }
+        }
+      ],
+      "network_why": {
+        "fr": "Elle ouvre le port 8135 sur votre réseau local seulement : c'est par lui que le NAS lui confie ses alertes à envoyer par SMS, avec un jeton propre à votre installation. Ne redirigez pas ce port dans votre box.",
+        "en": "It opens port 8135 on your local network only: that is how the NAS hands over its alerts to be sent by text, with a token unique to your installation. Do not forward this port in your router.",
+        "es": "Abre el puerto 8135 solo en tu red local: por él el NAS le entrega sus alertas para enviarlas por SMS, con un token propio de tu instalación. No redirijas este puerto en tu router."
+      },
+      "env": {
+        "TZ": "@host",
+        "DESKTROO_HOOK_TOKEN": "@derive:sms-hook"
+      },
+      "volumes": [
+        {
+          "name": "data",
+          "mount": "/data"
+        }
+      ],
+      "resources": {
+        "memory_mb": 128,
+        "cpus": 0.5
+      },
+      "window": {
+        "width": 900,
+        "height": 680
+      },
+      "icon": "icons/sms.svg",
+      "standalone": true
     }
   ]
 }
