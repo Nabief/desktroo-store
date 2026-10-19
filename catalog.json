@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-19T15:40:18Z",
+  "published": "2026-10-19T18:50:28Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -279,6 +279,95 @@
       },
       "icon": "icons/adguard.svg",
       "standalone": true
+    },
+    {
+      "id": "pihole",
+      "name": {
+        "fr": "Pi-hole",
+        "en": "Pi-hole",
+        "es": "Pi-hole"
+      },
+      "tagline": {
+        "fr": "Bloque publicités et traqueurs pour tout le réseau",
+        "en": "Blocks ads and trackers for your whole network",
+        "es": "Bloquea anuncios y rastreadores en toda la red"
+      },
+      "description": {
+        "fr": "Un serveur DNS qui filtre les publicités, les traqueurs et les sites dangereux pour tous les appareils de la maison ou du bureau, sans rien installer sur chacun.\n\nStatistiques, journal des requêtes, listes de blocage, sites autorisés ou bloqués. Prêt à l'emploi : il suffit d'indiquer l'adresse du NAS comme serveur DNS dans votre box.\n\nVous avez déjà un Pi-hole sur une autre machine (Raspberry Pi, VM) ? Vous pouvez le relier : la même fenêtre le pilote à distance.\n\nMoteur Pi-hole (EUPL-1.2), image officielle non modifiée. Pi-hole est une marque de Pi-hole LLC ; Desktroo n'est ni affilié ni soutenu par le projet Pi-hole.",
+        "en": "A DNS server that filters ads, trackers and dangerous sites for every device at home or at the office, with nothing to install on each.\n\nStatistics, query log, block lists, allowed or blocked sites. Ready to use: just set the NAS address as the DNS server in your router.\n\nAlready running Pi-hole on another machine (Raspberry Pi, VM)? You can link it: the same window controls it remotely.\n\nPi-hole engine (EUPL-1.2), unmodified official image. Pi-hole is a trademark of Pi-hole LLC; Desktroo is not affiliated with or endorsed by the Pi-hole project.",
+        "es": "Un servidor DNS que filtra los anuncios, los rastreadores y los sitios peligrosos para todos los dispositivos de casa o de la oficina, sin instalar nada en cada uno.\n\nEstadísticas, registro de consultas, listas de bloqueo, sitios permitidos o bloqueados. Listo para usar: basta con indicar la dirección del NAS como servidor DNS en tu router.\n\n¿Ya tienes un Pi-hole en otra máquina (Raspberry Pi, VM)? Puedes vincularlo: la misma ventana lo controla a distancia.\n\nMotor Pi-hole (EUPL-1.2), imagen oficial sin modificar. Pi-hole es una marca de Pi-hole LLC; Desktroo no está afiliado al proyecto Pi-hole ni cuenta con su respaldo."
+      },
+      "category": "reseau",
+      "channel": "test",
+      "version": "1.0.0",
+      "min_desktroo": "2.60.10",
+      "image": "docker.io/pihole/pihole",
+      "tag": "2026.10.0",
+      "digest": "sha256:d34134716fc32038b052a8674c7c6879e0ff21f0e6d8af345166fffa2c27c113",
+      "port": 8080,
+      "health": "/api/info/login",
+      "sso": "header",
+      "run_as": "0:0",
+      "read_only": false,
+      "cap_add": [
+        "NET_BIND_SERVICE",
+        "NET_RAW",
+        "CHOWN",
+        "DAC_OVERRIDE",
+        "FOWNER",
+        "SETUID",
+        "SETGID",
+        "SETPCAP",
+        "SETFCAP",
+        "KILL"
+      ],
+      "host_ports": [
+        {
+          "port": 53,
+          "proto": "both",
+          "label": {
+            "fr": "Serveur DNS",
+            "en": "DNS server",
+            "es": "Servidor DNS"
+          }
+        }
+      ],
+      "network_why": {
+        "fr": "Il ouvre le port 53 (DNS) sur votre réseau : c'est ce qui permet aux appareils de lui poser leurs questions.",
+        "en": "It opens port 53 (DNS) on your network: that is how your devices send it their queries.",
+        "es": "Abre el puerto 53 (DNS) en tu red: así es como los dispositivos le hacen sus consultas."
+      },
+      "setup_note": {
+        "fr": "Pour filtrer tout le réseau, indiquez l'adresse de ce NAS ({ip}) comme serveur DNS dans votre box, à la place de celui de votre fournisseur. Un appareil seul peut aussi l'utiliser en réglant son DNS sur cette adresse. Pi-hole et AdGuard Home ne peuvent pas tourner ensemble sur le même NAS (ils utilisent tous deux le port 53).",
+        "en": "To filter your whole network, set this NAS ({ip}) as the DNS server in your router, in place of your provider's. A single device can also use it by setting its DNS to this address. Pi-hole and AdGuard Home cannot run together on the same NAS (both use port 53).",
+        "es": "Para filtrar toda la red, indica la dirección de este NAS ({ip}) como servidor DNS en tu router, en lugar del de tu proveedor. Un solo dispositivo también puede usarlo configurando su DNS con esta dirección. Pi-hole y AdGuard Home no pueden funcionar juntos en el mismo NAS (ambos usan el puerto 53)."
+      },
+      "license": {
+        "name": "Pi-hole (EUPL-1.2)",
+        "url": "https://github.com/pi-hole/docker-pi-hole"
+      },
+      "env": {
+        "TZ": "@host",
+        "FTLCONF_webserver_api_password": "@derive:ph-admin",
+        "FTLCONF_webserver_port": "8080",
+        "FTLCONF_dns_listeningMode": "all"
+      },
+      "volumes": [
+        {
+          "name": "etc",
+          "mount": "/etc/pihole"
+        }
+      ],
+      "resources": {
+        "memory_mb": 512,
+        "cpus": 1
+      },
+      "window": {
+        "width": 1000,
+        "height": 700
+      },
+      "icon": "icons/pihole.svg",
+      "standalone": false
     },
     {
       "id": "wireguard",
