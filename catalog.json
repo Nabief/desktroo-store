@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-18T17:07:05Z",
+  "published": "2026-10-19T06:49:13Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -784,7 +784,11 @@
         "width": 900,
         "height": 620
       },
-      "icon": "icons/onlyoffice.svg"
+      "icon": "icons/onlyoffice.svg",
+      "idle_stop": {
+        "default": true,
+        "minutes": 15
+      }
     }
   ]
 }
