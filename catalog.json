@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-20T16:04:52Z",
+  "published": "2026-10-22T11:18:53Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -942,6 +942,89 @@
       },
       "icon": "icons/sms.svg",
       "standalone": true
+    },
+    {
+      "id": "cameras",
+      "name": {
+        "fr": "Caméras",
+        "en": "Cameras",
+        "es": "Cámaras"
+      },
+      "tagline": {
+        "fr": "Vos caméras IP en direct, avec enregistrement et détection",
+        "en": "Your IP cameras live, with recording and detection",
+        "es": "Tus cámaras IP en directo, con grabación y detección"
+      },
+      "description": {
+        "fr": "Un système de vidéosurveillance sur votre NAS : il affiche vos caméras IP (RTSP, ONVIF) en direct sur toutes vos pages, enregistre en continu ou seulement quand quelque chose bouge, et reconnaît les personnes, véhicules et animaux pour ne vous signaler que l'important.\n\nLes images restent chez vous, sur le NAS : aucun compte, aucun cloud, aucun abonnement. Les enregistrements sont stockés dans le dossier de l'app.\n\nMoteur Frigate (MIT), image officielle non modifiée. Desktroo n'est ni affilié ni soutenu par le projet Frigate.",
+        "en": "A video surveillance system on your NAS: it shows your IP cameras (RTSP, ONVIF) live, records continuously or only when something moves, and recognises people, vehicles and animals so you only hear about what matters.\n\nThe footage stays at home, on your NAS: no account, no cloud, no subscription. Recordings are stored in the app's folder.\n\nFrigate engine (MIT), unmodified official image. Desktroo is not affiliated with or endorsed by the Frigate project.",
+        "es": "Un sistema de videovigilancia en tu NAS: muestra tus cámaras IP (RTSP, ONVIF) en directo, graba de forma continua o solo cuando algo se mueve, y reconoce personas, vehículos y animales para avisarte solo de lo importante.\n\nLas imágenes se quedan en tu casa, en el NAS: sin cuenta, sin nube, sin suscripción. Las grabaciones se guardan en la carpeta de la app.\n\nMotor Frigate (MIT), imagen oficial sin modificar. Desktroo no está afiliado al proyecto Frigate ni cuenta con su respaldo."
+      },
+      "category": "securite",
+      "version": "1.0.0",
+      "min_desktroo": "2.60.22",
+      "image": "ghcr.io/blakeblackshear/frigate",
+      "tag": "0.18.2",
+      "digest": "sha256:fd60f99ffd4eb6c42360ed4e14953e270586f239309ab3983e55b2e97ffac09a",
+      "port": 8080,
+      "health": "/api/version",
+      "health_wait": 240,
+      "sso": "header",
+      "run_as": "0:0",
+      "read_only": false,
+      "cap_add": [
+        "CHOWN",
+        "DAC_OVERRIDE",
+        "FOWNER",
+        "SETUID",
+        "SETGID",
+        "KILL",
+        "SETPCAP",
+        "SETFCAP",
+        "FSETID",
+        "SYS_CHROOT"
+      ],
+      "license": {
+        "name": "Frigate (MIT)",
+        "url": "https://github.com/blakeblackshear/frigate"
+      },
+      "env": {
+        "TZ": "@host"
+      },
+      "volumes": [
+        {
+          "name": "config",
+          "mount": "/config"
+        },
+        {
+          "name": "media",
+          "mount": "/media/frigate"
+        }
+      ],
+      "resources": {
+        "memory_mb": 3072,
+        "cpus": 4,
+        "shm_mb": 512
+      },
+      "seed": [
+        {
+          "volume": "config",
+          "path": "config.yml",
+          "content": "mqtt:\n  enabled: false\ngo2rtc:\n  streams: {}\ncameras: {}\n"
+        }
+      ],
+      "window": {
+        "width": 1100,
+        "height": 740
+      },
+      "icon": "icons/cameras.svg",
+      "standalone": false,
+      "setup_note": {
+        "fr": "Ajoutez vos caméras depuis la fenêtre Caméras : adresse RTSP de chaque caméra (rtsp://identifiant:mot-de-passe@adresse/flux).",
+        "en": "Add your cameras from the Cameras window: each camera's RTSP address (rtsp://user:password@address/stream).",
+        "es": "Añade tus cámaras desde la ventana Cámaras: dirección RTSP de cada cámara (rtsp://usuario:contraseña@dirección/flujo)."
+      },
+      "health_port": 5000
     }
   ]
 }
