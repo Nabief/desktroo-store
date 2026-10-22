@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-22T12:48:59Z",
+  "published": "2026-10-22T13:33:16Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -785,6 +785,103 @@
         "user": "admin",
         "derive": "jellyfin"
       }
+    },
+    {
+      "id": "navidrome",
+      "name": {
+        "fr": "Musique (Navidrome)",
+        "en": "Music (Navidrome)",
+        "es": "Música (Navidrome)"
+      },
+      "tagline": {
+        "fr": "Votre musique, en streaming depuis votre NAS",
+        "en": "Your music, streamed from your NAS",
+        "es": "Tu música, en streaming desde tu NAS"
+      },
+      "description": {
+        "fr": "Navidrome transforme vos dossiers de musique en une vraie bibliothèque : artistes, albums, listes de lecture, favoris, pochettes.\n\nLa fenêtre Musique de Desktroo la lit directement, et vos applications de musique habituelles (Symfonium, DSub, Feishin…) s'y connectent aussi, sur votre réseau local ou par le VPN. Vos fichiers ne sont jamais modifiés.",
+        "en": "Navidrome turns your music folders into a real library: artists, albums, playlists, favorites, covers.\n\nDesktroo's Music window reads it directly, and your usual music apps (Symfonium, DSub, Feishin…) can connect too, on your local network or through the VPN. Your files are never modified.",
+        "es": "Navidrome convierte tus carpetas de música en una biblioteca de verdad: artistas, álbumes, listas, favoritos, carátulas.\n\nLa ventana Música de Desktroo la lee directamente, y tus aplicaciones de música (Symfonium, DSub, Feishin…) también pueden conectarse, en tu red local o por la VPN. Tus archivos nunca se modifican."
+      },
+      "category": "media",
+      "version": "1.0.0",
+      "min_desktroo": "2.60.39",
+      "image": "docker.io/deluan/navidrome",
+      "tag": "0.64.2",
+      "digest": "sha256:38dc2727bfcfd5ede290f8ada114fc90368146f265ae4701ddddbcbe2a44ee52",
+      "port": 8080,
+      "health": "/ping",
+      "sso": "header",
+      "run_as": "568:568",
+      "read_only": false,
+      "nas_access": {
+        "mode": "ro",
+        "why": {
+          "fr": "Il lit les dossiers de musique que vous choisissez, en lecture seule : vos fichiers ne sont jamais modifiés.",
+          "en": "It reads the music folders you choose, read-only: your files are never modified.",
+          "es": "Lee las carpetas de música que elijas, en modo de solo lectura: tus archivos nunca se modifican."
+        }
+      },
+      "host_ports": [
+        {
+          "port": 4533,
+          "to": 8080,
+          "proto": "tcp",
+          "bind": "lan",
+          "label": {
+            "fr": "Applications musique (réseau local)",
+            "en": "Music apps (local network)",
+            "es": "Aplicaciones de música (red local)"
+          }
+        }
+      ],
+      "open_url": "http://{ip}:4533",
+      "network_why": {
+        "fr": "Il ouvre le port 4533 sur votre réseau local seulement : c'est l'adresse à saisir dans vos applications de musique (Symfonium, DSub, Feishin…). Il ne s'ouvre jamais sur Internet.",
+        "en": "It opens port 4533 on your local network only: that is the address to enter in your music apps (Symfonium, DSub, Feishin…). It is never opened to the Internet.",
+        "es": "Abre el puerto 4533 solo en tu red local: es la dirección para tus aplicaciones de música (Symfonium, DSub, Feishin…). Nunca se abre a Internet."
+      },
+      "setup_note": {
+        "fr": "Ouvrez la fenêtre Musique de Desktroo : elle affiche votre bibliothèque et lit la musique directement. Choisissez d'abord les dossiers de musique de votre NAS (lecture seule) ; Navidrome les analyse tout seul.\n\nPour écouter sur téléphone ou dans une autre application, utilisez l'adresse http://{ip}:4533 avec l'identifiant et le mot de passe affichés sur cette fiche (compatible Subsonic : Symfonium, DSub, Feishin, Substreamer…). Ne redirigez pas le port 4533 sur votre box : pour écouter à l'extérieur, passez par le VPN.",
+        "en": "Open Desktroo's Music window: it shows your library and plays your music directly. First pick the music folders of your NAS (read-only); Navidrome scans them on its own.\n\nTo listen on a phone or in another app, use http://{ip}:4533 with the username and password shown on this page (Subsonic-compatible: Symfonium, DSub, Feishin, Substreamer…). Do not forward port 4533 on your router: to listen from outside, use the VPN.",
+        "es": "Abre la ventana Música de Desktroo: muestra tu biblioteca y reproduce la música directamente. Elige primero las carpetas de música de tu NAS (solo lectura); Navidrome las analiza solo.\n\nPara escuchar en el móvil o en otra aplicación, usa http://{ip}:4533 con el usuario y la contraseña que aparecen en esta ficha (compatible con Subsonic: Symfonium, DSub, Feishin, Substreamer…). No redirijas el puerto 4533 en tu router: para escuchar fuera de casa, usa la VPN."
+      },
+      "license": {
+        "name": "Navidrome (GPL-3.0)",
+        "url": "https://github.com/navidrome/navidrome"
+      },
+      "env": {
+        "TZ": "@host",
+        "ND_PORT": "8080",
+        "ND_MUSICFOLDER": "/nas",
+        "ND_DATAFOLDER": "/data",
+        "ND_SCANNER_SCHEDULE": "@every 12h",
+        "ND_DEFAULTLANGUAGE": "fr",
+        "ND_ENABLESHARING": "false",
+        "ND_ENABLEINSIGHTSCOLLECTOR": "false",
+        "ND_DEVAUTOCREATEADMINPASSWORD": "@derive:navidrome"
+      },
+      "volumes": [
+        {
+          "name": "data",
+          "mount": "/data"
+        }
+      ],
+      "resources": {
+        "memory_mb": 1024,
+        "cpus": 2
+      },
+      "icon": "icons/navidrome.svg",
+      "credentials": {
+        "user": "admin",
+        "derive": "navidrome"
+      },
+      "channel": "test",
+      "window": {
+        "width": 1100,
+        "height": 720
+      },
+      "standalone": false
     },
     {
       "id": "onlyoffice",
