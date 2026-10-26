@@ -1,7 +1,7 @@
 # Desktroo Apps — catalogue
 
 Catalogue de Desktroo Apps, les apps de [Desktroo](https://desktroo.fr), le bureau web pour TrueNAS.
-Seules les apps Mdm-services.fr y figurent ; elles sont comprises dans l'abonnement Desktroo.
+Seules les apps Mdm-services.fr y figurent. Les installer et les mettre à jour demande la clé gratuite de Desktroo ; les correctifs de sécurité restent ouverts à tous.
 
 - `catalog.json` : la liste des apps, lue par Desktroo.
 - `catalog.json.sig` : sa signature. Desktroo refuse un catalogue non signé, modifié ou plus ancien que le sien.

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-23T09:29:04Z",
+  "published": "2026-10-26T12:10:57Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -158,14 +158,18 @@
         "es": "Busca software malicioso en todas las carpetas de tu NAS, sin nada que configurar.\n\nAnálisis programado por la noche o a demanda, firmas actualizadas cada noche, informes. Desktroo pone en cuarentena los archivos peligrosos: el propio antivirus no puede modificar nada.\n\nMotor ClamAV."
       },
       "category": "securite",
-      "version": "1.0.4",
-      "min_desktroo": "2.49.0",
+      "version": "1.0.5",
+      "min_desktroo": "3.1.4",
       "image": "ghcr.io/nabief/desktroo-antivirus",
       "digest": "sha256:0adcc0bdc835e90ac07f79e448819db5c326009491cd757344382bd5fb6faf6d",
       "port": 8080,
       "health": "/healthz",
       "sso": "header",
       "run_as": "0:0",
+      "cap_add": [
+        "SETUID",
+        "SETGID"
+      ],
       "nas_access": {
         "mode": "all",
         "why": {
