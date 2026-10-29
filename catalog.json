@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-26T12:10:57Z",
+  "published": "2026-10-29T09:01:18Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -1126,6 +1126,130 @@
       },
       "health_port": 5000,
       "channel": "test"
+    },
+    {
+      "id": "remote",
+      "name": {
+        "fr": "Desktroo Remote",
+        "en": "Desktroo Remote",
+        "es": "Desktroo Remote"
+      },
+      "tagline": {
+        "fr": "Votre propre serveur d'assistance à distance, sans abonnement",
+        "en": "Your own remote support server, with no subscription",
+        "es": "Tu propio servidor de asistencia remota, sin suscripción"
+      },
+      "description": {
+        "fr": "Prenez la main sur les ordinateurs de vos clients ou de votre équipe en passant par votre NAS, et non par le serveur d'un éditeur : vos connexions restent chez vous, sans limite de postes ni de techniciens.\n\nDesktroo Remote fait tourner le serveur RustDesk et le pilote depuis votre bureau : état du serveur, liste des postes avec leur nom, leur système et leur présence en ligne, client Windows déjà réglé à envoyer en un clic, script d'installation pour vos postes gérés (avec mot de passe permanent si vous le souhaitez), configuration à importer pour macOS, Linux, Android et iOS.\n\nToutes les sessions sont chiffrées de bout en bout ; seuls les postes réglés avec la clé de votre serveur peuvent l'utiliser.\n\nMoteur RustDesk Server (AGPL-3.0), programmes officiels non modifiés. RustDesk est une marque de Purslane Ltd. ; Desktroo n'est ni affilié au projet RustDesk ni soutenu par lui.",
+        "en": "Take control of your customers' or your team's computers through your NAS, not through a vendor's server: your connections stay with you, with no limit on devices or technicians.\n\nDesktroo Remote runs the RustDesk server and manages it from your desktop: server status, a list of devices with their name, system and online presence, a preconfigured Windows client to send in one click, an installation script for your managed devices (with a permanent password if you wish), and a configuration to import on macOS, Linux, Android and iOS.\n\nEvery session is end-to-end encrypted; only devices configured with your server's key can use it.\n\nRustDesk Server engine (AGPL-3.0), unmodified official programs. RustDesk is a trademark of Purslane Ltd.; Desktroo is not affiliated with or endorsed by the RustDesk project.",
+        "es": "Toma el control de los ordenadores de tus clientes o de tu equipo a través de tu NAS, y no del servidor de un proveedor: tus conexiones se quedan en casa, sin límite de equipos ni de técnicos.\n\nDesktroo Remote ejecuta el servidor RustDesk y lo gestiona desde tu escritorio: estado del servidor, lista de equipos con su nombre, su sistema y su presencia en línea, cliente de Windows ya configurado para enviar con un clic, script de instalación para tus equipos gestionados (con contraseña permanente si lo deseas) y configuración que importar en macOS, Linux, Android e iOS.\n\nTodas las sesiones están cifradas de extremo a extremo; solo los equipos configurados con la clave de tu servidor pueden usarlo.\n\nMotor RustDesk Server (AGPL-3.0), programas oficiales sin modificar. RustDesk es una marca de Purslane Ltd.; Desktroo no está afiliado al proyecto RustDesk ni cuenta con su respaldo."
+      },
+      "category": "reseau",
+      "channel": "test",
+      "version": "1.0.0",
+      "min_desktroo": "3.1.0",
+      "image": "ghcr.io/nabief/desktroo-remote",
+      "digest": "sha256:0092d34fd81099e993bd842f99a838ec1cd8f91b8b3a2349ddcc7b5d4e3e1b4d",
+      "port": 8080,
+      "health": "/healthz",
+      "sso": "header",
+      "run_as": "568:568",
+      "read_only": true,
+      "host_ports": [
+        {
+          "port": 21115,
+          "proto": "tcp",
+          "bind": "all",
+          "label": {
+            "fr": "RustDesk : test du type de réseau",
+            "en": "RustDesk: network type test",
+            "es": "RustDesk: prueba del tipo de red"
+          }
+        },
+        {
+          "port": 21116,
+          "proto": "both",
+          "bind": "all",
+          "label": {
+            "fr": "RustDesk : identifiants et mise en relation",
+            "en": "RustDesk: IDs and connection setup",
+            "es": "RustDesk: IDs y puesta en contacto"
+          }
+        },
+        {
+          "port": 21117,
+          "proto": "tcp",
+          "bind": "all",
+          "label": {
+            "fr": "RustDesk : relais",
+            "en": "RustDesk: relay",
+            "es": "RustDesk: relé"
+          }
+        },
+        {
+          "port": 21114,
+          "to": 8081,
+          "proto": "tcp",
+          "bind": "all",
+          "label": {
+            "fr": "Présence des postes",
+            "en": "Device presence",
+            "es": "Presencia de los equipos"
+          }
+        }
+      ],
+      "network_why": {
+        "fr": "Il ouvre les ports 21115 à 21117 (TCP, et 21116 aussi en UDP) : c'est par eux que les postes trouvent votre serveur et que passent les sessions quand une connexion directe est impossible. Il ouvre aussi le port 21114, où les postes signalent leur présence et leur nom ; seuls les postes enregistrés avec la clé de votre serveur y sont retenus. L'administration, elle, ne passe que par Desktroo.",
+        "en": "It opens ports 21115 to 21117 (TCP, and 21116 in UDP too): that is how devices find your server and how sessions flow when a direct connection is impossible. It also opens port 21114, where devices report their presence and name; only devices registered with your server's key are kept. Administration goes through Desktroo only.",
+        "es": "Abre los puertos 21115 a 21117 (TCP, y el 21116 también en UDP): por ellos los equipos encuentran tu servidor y pasan las sesiones cuando una conexión directa es imposible. También abre el puerto 21114, donde los equipos señalan su presencia y su nombre; solo se guardan los equipos registrados con la clave de tu servidor. La administración pasa únicamente por Desktroo."
+      },
+      "setup_note": {
+        "fr": "Dans votre box, redirigez vers ce NAS ({ip}) les ports 21114, 21115, 21116 et 21117 en TCP, et le port 21116 en UDP. Ouvrez ensuite Desktroo Remote : l'onglet « Installer sur un poste » donne le client Windows déjà réglé et la configuration pour les autres systèmes.",
+        "en": "In your router, forward ports 21114, 21115, 21116 and 21117 in TCP, and port 21116 in UDP, to this NAS ({ip}). Then open Desktroo Remote: the “Set up a device” tab gives you the preconfigured Windows client and the configuration for other systems.",
+        "es": "En tu router, redirige a este NAS ({ip}) los puertos 21114, 21115, 21116 y 21117 en TCP, y el puerto 21116 en UDP. Después abre Desktroo Remote: la pestaña «Instalar en un equipo» te da el cliente de Windows ya configurado y la configuración para los demás sistemas."
+      },
+      "install_fields": [
+        {
+          "key": "public_host",
+          "env": "RD_PUBLIC_HOST",
+          "kind": "host",
+          "required": true,
+          "label": {
+            "fr": "Adresse publique de votre box",
+            "en": "Public address of your router",
+            "es": "Dirección pública de tu router"
+          },
+          "placeholder": "remote.mondomaine.fr",
+          "help": {
+            "fr": "Le nom de domaine (ou l'adresse IP fixe) par lequel les postes joindront votre box depuis Internet. Il est inscrit dans la configuration de chaque poste : choisissez une adresse qui ne changera pas.",
+            "en": "The domain name (or fixed IP address) devices will use to reach your router from the Internet. It is written into each device's configuration: choose an address that will not change.",
+            "es": "El nombre de dominio (o la IP fija) con el que los equipos llegarán a tu router desde Internet. Se escribe en la configuración de cada equipo: elige una dirección que no vaya a cambiar."
+          }
+        }
+      ],
+      "license": {
+        "name": "RustDesk Server (AGPL-3.0)",
+        "url": "https://github.com/rustdesk/rustdesk-server"
+      },
+      "env": {
+        "TZ": "@host"
+      },
+      "volumes": [
+        {
+          "name": "data",
+          "mount": "/data"
+        }
+      ],
+      "resources": {
+        "memory_mb": 256,
+        "cpus": 2
+      },
+      "window": {
+        "width": 1040,
+        "height": 720
+      },
+      "icon": "icons/remote.svg",
+      "standalone": true
     }
   ]
 }
