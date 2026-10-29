@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-29T09:01:18Z",
+  "published": "2026-10-29T09:19:08Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -1146,10 +1146,10 @@
       },
       "category": "reseau",
       "channel": "test",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "min_desktroo": "3.1.0",
       "image": "ghcr.io/nabief/desktroo-remote",
-      "digest": "sha256:0092d34fd81099e993bd842f99a838ec1cd8f91b8b3a2349ddcc7b5d4e3e1b4d",
+      "digest": "sha256:34ca8671650afbe847a0ce678ac3d66314d2ee2140e80faaccad2b828f63d556",
       "port": 8080,
       "health": "/healthz",
       "sso": "header",
