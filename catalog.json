@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-29T11:20:54Z",
+  "published": "2026-10-29T11:27:38Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -1145,10 +1145,10 @@
         "es": "Toma el control de los ordenadores de tus clientes o de tu equipo a través de tu NAS, y no del servidor de un proveedor: tus conexiones se quedan en casa, sin límite de equipos ni de técnicos.\n\nDesktroo Remote ejecuta el servidor RustDesk y lo gestiona desde tu escritorio: estado del servidor, lista de equipos con su nombre, su sistema y su presencia en línea, cliente de Windows ya configurado para enviar con un clic, script de instalación para tus equipos gestionados (con contraseña permanente si lo deseas) y configuración que importar en macOS, Linux, Android e iOS.\n\nTus técnicos inician sesión en RustDesk con su cuenta (autenticación en dos pasos disponible): la pestaña «Dispositivos accesibles» lista entonces todos tus equipos, ordenados por cliente, con su presencia en línea; un doble clic abre la sesión.\n\nTodas las sesiones están cifradas de extremo a extremo; solo los equipos configurados con la clave de tu servidor pueden usarlo.\n\nMotor RustDesk Server (AGPL-3.0), programas oficiales sin modificar. RustDesk es una marca de Purslane Ltd.; Desktroo no está afiliado al proyecto RustDesk ni cuenta con su respaldo."
       },
       "category": "reseau",
-      "version": "1.2.1",
+      "version": "1.2.2",
       "min_desktroo": "3.1.0",
       "image": "ghcr.io/nabief/desktroo-remote",
-      "digest": "sha256:1c9ca5e404f2bb71c4e43bad52e844ac0c8cceba0344887d504a7fd4d170197c",
+      "digest": "sha256:6a0cd743ab506492091b879e67b671f218d1f53741c9a84dfdf1bf01a1a3499e",
       "port": 8080,
       "health": "/healthz",
       "sso": "header",
