@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-10-30T02:49:26Z",
+  "published": "2026-11-01T06:28:38Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -788,7 +788,28 @@
       "credentials": {
         "user": "admin",
         "derive": "jellyfin"
-      }
+      },
+      "extra_links": [
+        {
+          "icon": "android",
+          "url": "https://github.com/Nabief/ZIKmu-releases/releases/latest",
+          "label": {
+            "fr": "ZIKmu pour Android",
+            "en": "ZIKmu for Android",
+            "es": "ZIKmu para Android"
+          },
+          "desc": {
+            "fr": "Le lecteur musical pour Jellyfin sur téléphone, tablette et Android TV. Téléchargez l’APK, puis installez-le (autorisez les sources inconnues si Android le demande).",
+            "en": "The music player for Jellyfin on phone, tablet and Android TV. Download the APK, then install it (allow unknown sources if Android asks).",
+            "es": "El reproductor de música para Jellyfin en teléfono, tableta y Android TV. Descarga el APK e instálalo (permite fuentes desconocidas si Android lo pide)."
+          },
+          "button": {
+            "fr": "Télécharger l’APK",
+            "en": "Download the APK",
+            "es": "Descargar el APK"
+          }
+        }
+      ]
     },
     {
       "id": "navidrome",
