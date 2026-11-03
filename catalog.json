@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-11-02T17:17:16Z",
+  "published": "2026-11-03T08:34:32Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -21,10 +21,10 @@
         "es": "Genera los códigos de 6 cifras de tus cuentas protegidas con verificación en dos pasos.\n\nLa caja fuerte se cifra en tu navegador con tu contraseña maestra: ni siquiera tu NAS ve tus códigos. Una caja fuerte por usuario, bloqueo automático a los 10 minutos."
       },
       "category": "securite",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "min_desktroo": "2.46.0",
       "image": "ghcr.io/nabief/desktroo-authenticator",
-      "digest": "sha256:995a60c101d4ba161cd9d7dbc23784613de9fd59ea28feb399c00ed6f585959f",
+      "digest": "sha256:935a7482cb86495d49a64cc798d8cac1e232ff4dc20590b3ba3241915ee0e95d",
       "port": 8080,
       "health": "/healthz",
       "sso": "header",
