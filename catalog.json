@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-11-07T10:57:15Z",
+  "published": "2026-11-07T11:04:05Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -1191,12 +1191,11 @@
         "es": "Tus PDF del NAS, de Nextcloud y de Synology Drive"
       },
       "description": {
-        "fr": "Ouvrez vos PDF dans une fenêtre du bureau : annotations et commentaires, formulaires, signature, réorganisation des pages, fusion, découpe, protection par mot de passe.\n\nVos fichiers restent où ils sont : dossiers du NAS, Nextcloud ou Synology Drive. Avec Nextcloud et Synology Drive, chaque personne relie son propre compte ; versions, partages et synchronisation des postes continuent de fonctionner, et l'app ne remplace jamais un fichier modifié entre-temps par quelqu'un d'autre.\n\nÉditeur basé sur PdfCraft (logiciel libre, MIT / Apache-2.0), en version de test.",
-        "en": "Open your PDFs in a desktop window: annotations and comments, forms, signatures, page reordering, merging, splitting, password protection.\n\nYour files stay where they are: NAS folders, Nextcloud or Synology Drive. With Nextcloud and Synology Drive, everyone links their own account; versions, shares and device sync keep working, and the app never overwrites a file someone else changed in the meantime.\n\nEditor based on PdfCraft (free software, MIT / Apache-2.0), test version.",
-        "es": "Abre tus PDF en una ventana del escritorio: anotaciones y comentarios, formularios, firma, reorganización de páginas, combinación, división, protección con contraseña.\n\nTus archivos se quedan donde están: carpetas del NAS, Nextcloud o Synology Drive. Con Nextcloud y Synology Drive, cada persona vincula su propia cuenta; las versiones, los recursos compartidos y la sincronización de los equipos siguen funcionando, y la app nunca sustituye un archivo que otra persona haya modificado mientras tanto.\n\nEditor basado en PdfCraft (software libre, MIT / Apache-2.0), versión de prueba."
+        "fr": "Ouvrez vos PDF dans une fenêtre du bureau : annotations et commentaires, formulaires, signature, réorganisation des pages, fusion, découpe, protection par mot de passe.\n\nVos fichiers restent où ils sont : dossiers du NAS, Nextcloud ou Synology Drive. Avec Nextcloud et Synology Drive, chaque personne relie son propre compte ; versions, partages et synchronisation des postes continuent de fonctionner, et l'app ne remplace jamais un fichier modifié entre-temps par quelqu'un d'autre.\n\nÉditeur basé sur PdfCraft (logiciel libre, MIT / Apache-2.0).",
+        "en": "Open your PDFs in a desktop window: annotations and comments, forms, signatures, page reordering, merging, splitting, password protection.\n\nYour files stay where they are: NAS folders, Nextcloud or Synology Drive. With Nextcloud and Synology Drive, everyone links their own account; versions, shares and device sync keep working, and the app never overwrites a file someone else changed in the meantime.\n\nEditor based on PdfCraft (free software, MIT / Apache-2.0).",
+        "es": "Abre tus PDF en una ventana del escritorio: anotaciones y comentarios, formularios, firma, reorganización de páginas, combinación, división, protección con contraseña.\n\nTus archivos se quedan donde están: carpetas del NAS, Nextcloud o Synology Drive. Con Nextcloud y Synology Drive, cada persona vincula su propia cuenta; las versiones, los recursos compartidos y la sincronización de los equipos siguen funcionando, y la app nunca sustituye un archivo que otra persona haya modificado mientras tanto.\n\nEditor basado en PdfCraft (software libre, MIT / Apache-2.0)."
       },
       "category": "bureautique",
-      "channel": "test",
       "version": "0.2.0",
       "min_desktroo": "3.1.11",
       "image": "ghcr.io/nabief/desktroo-pdf",
