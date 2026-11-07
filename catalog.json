@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-11-07T10:26:06Z",
+  "published": "2026-11-07T10:57:15Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -1186,21 +1186,21 @@
         "es": "Desktroo PDF"
       },
       "tagline": {
-        "fr": "Lisez, annotez et modifiez les PDF de votre NAS",
-        "en": "Read, annotate and edit the PDFs on your NAS",
-        "es": "Lee, anota y modifica los PDF de tu NAS"
+        "fr": "Vos PDF du NAS, de Nextcloud et de Synology Drive",
+        "en": "Your PDFs from the NAS, Nextcloud and Synology Drive",
+        "es": "Tus PDF del NAS, de Nextcloud y de Synology Drive"
       },
       "description": {
-        "fr": "Ouvrez les PDF de votre NAS dans une fenêtre du bureau : annotations et commentaires, formulaires, signature, réorganisation des pages, fusion, découpe, protection par mot de passe. Enregistrer remplace le fichier sur le NAS ; rien ne passe par Internet.\n\nVous choisissez le compte du NAS dont l'app prend les droits et les dossiers qu'elle peut ouvrir.\n\nÉditeur basé sur PdfCraft (logiciel libre, MIT / Apache-2.0), en version de test.",
-        "en": "Open the PDFs on your NAS in a desktop window: annotations and comments, forms, signatures, page reordering, merging, splitting, password protection. Saving replaces the file on the NAS; nothing goes through the Internet.\n\nYou choose the NAS account whose rights the app uses and the folders it can open.\n\nEditor based on PdfCraft (free software, MIT / Apache-2.0), test version.",
-        "es": "Abre los PDF de tu NAS en una ventana del escritorio: anotaciones y comentarios, formularios, firma, reorganización de páginas, combinación, división, protección con contraseña. Guardar sustituye el archivo en el NAS; nada pasa por Internet.\n\nTú eliges la cuenta del NAS cuyos permisos usa la app y las carpetas que puede abrir.\n\nEditor basado en PdfCraft (software libre, MIT / Apache-2.0), versión de prueba."
+        "fr": "Ouvrez vos PDF dans une fenêtre du bureau : annotations et commentaires, formulaires, signature, réorganisation des pages, fusion, découpe, protection par mot de passe.\n\nVos fichiers restent où ils sont : dossiers du NAS, Nextcloud ou Synology Drive. Avec Nextcloud et Synology Drive, chaque personne relie son propre compte ; versions, partages et synchronisation des postes continuent de fonctionner, et l'app ne remplace jamais un fichier modifié entre-temps par quelqu'un d'autre.\n\nÉditeur basé sur PdfCraft (logiciel libre, MIT / Apache-2.0), en version de test.",
+        "en": "Open your PDFs in a desktop window: annotations and comments, forms, signatures, page reordering, merging, splitting, password protection.\n\nYour files stay where they are: NAS folders, Nextcloud or Synology Drive. With Nextcloud and Synology Drive, everyone links their own account; versions, shares and device sync keep working, and the app never overwrites a file someone else changed in the meantime.\n\nEditor based on PdfCraft (free software, MIT / Apache-2.0), test version.",
+        "es": "Abre tus PDF en una ventana del escritorio: anotaciones y comentarios, formularios, firma, reorganización de páginas, combinación, división, protección con contraseña.\n\nTus archivos se quedan donde están: carpetas del NAS, Nextcloud o Synology Drive. Con Nextcloud y Synology Drive, cada persona vincula su propia cuenta; las versiones, los recursos compartidos y la sincronización de los equipos siguen funcionando, y la app nunca sustituye un archivo que otra persona haya modificado mientras tanto.\n\nEditor basado en PdfCraft (software libre, MIT / Apache-2.0), versión de prueba."
       },
       "category": "bureautique",
       "channel": "test",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "min_desktroo": "3.1.11",
       "image": "ghcr.io/nabief/desktroo-pdf",
-      "digest": "sha256:34ae88340fac679e7c060d437df7093ff833c1a7c294a552701fca7362b06191",
+      "digest": "sha256:7473bd1184e839499e05834bb2cb755486413f348010397fded20d069a2e8675",
       "port": 8080,
       "health": "/healthz",
       "sso": "header",
@@ -1220,7 +1220,12 @@
       "env": {
         "TZ": "@host"
       },
-      "volumes": [],
+      "volumes": [
+        {
+          "name": "data",
+          "mount": "/data"
+        }
+      ],
       "resources": {
         "memory_mb": 256,
         "cpus": 1
