@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-11-03T13:48:28Z",
+  "published": "2026-11-07T10:24:06Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -1176,6 +1176,60 @@
         "height": 720
       },
       "icon": "icons/remote.svg",
+      "standalone": true
+    },
+    {
+      "id": "pdf",
+      "name": {
+        "fr": "PDF",
+        "en": "PDF",
+        "es": "PDF"
+      },
+      "tagline": {
+        "fr": "Lisez, annotez et modifiez les PDF de votre NAS",
+        "en": "Read, annotate and edit the PDFs on your NAS",
+        "es": "Lee, anota y modifica los PDF de tu NAS"
+      },
+      "description": {
+        "fr": "Ouvrez les PDF de votre NAS dans une fenêtre du bureau : annotations et commentaires, formulaires, signature, réorganisation des pages, fusion, découpe, protection par mot de passe. Enregistrer remplace le fichier sur le NAS ; rien ne passe par Internet.\n\nVous choisissez le compte du NAS dont l'app prend les droits et les dossiers qu'elle peut ouvrir.\n\nÉditeur basé sur PdfCraft (logiciel libre, MIT / Apache-2.0), en version de test.",
+        "en": "Open the PDFs on your NAS in a desktop window: annotations and comments, forms, signatures, page reordering, merging, splitting, password protection. Saving replaces the file on the NAS; nothing goes through the Internet.\n\nYou choose the NAS account whose rights the app uses and the folders it can open.\n\nEditor based on PdfCraft (free software, MIT / Apache-2.0), test version.",
+        "es": "Abre los PDF de tu NAS en una ventana del escritorio: anotaciones y comentarios, formularios, firma, reorganización de páginas, combinación, división, protección con contraseña. Guardar sustituye el archivo en el NAS; nada pasa por Internet.\n\nTú eliges la cuenta del NAS cuyos permisos usa la app y las carpetas que puede abrir.\n\nEditor basado en PdfCraft (software libre, MIT / Apache-2.0), versión de prueba."
+      },
+      "category": "bureautique",
+      "channel": "test",
+      "version": "0.1.0",
+      "min_desktroo": "3.1.11",
+      "image": "ghcr.io/nabief/desktroo-pdf",
+      "digest": "sha256:34ae88340fac679e7c060d437df7093ff833c1a7c294a552701fca7362b06191",
+      "port": 8080,
+      "health": "/healthz",
+      "sso": "header",
+      "run_as": "568:568",
+      "nas_access": {
+        "mode": "rw",
+        "why": {
+          "fr": "Elle ouvre les PDF des dossiers que vous choisissez et y enregistre vos modifications, avec les droits du compte que vous lui prêtez.",
+          "en": "It opens the PDFs in the folders you choose and saves your changes there, with the rights of the account you lend it.",
+          "es": "Abre los PDF de las carpetas que elijas y guarda allí tus cambios, con los permisos de la cuenta que le prestes."
+        }
+      },
+      "license": {
+        "name": "PdfCraft (MIT / Apache-2.0)",
+        "url": "https://github.com/storytold/pdfcraft"
+      },
+      "env": {
+        "TZ": "@host"
+      },
+      "volumes": [],
+      "resources": {
+        "memory_mb": 256,
+        "cpus": 1
+      },
+      "window": {
+        "width": 1200,
+        "height": 780
+      },
+      "icon": "icons/pdf.svg",
       "standalone": true
     }
   ]
