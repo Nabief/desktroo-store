@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published": "2026-11-07T10:24:06Z",
+  "published": "2026-11-07T10:26:06Z",
   "min_desktroo": "2.46.0",
   "apps": [
     {
@@ -1181,9 +1181,9 @@
     {
       "id": "pdf",
       "name": {
-        "fr": "PDF",
-        "en": "PDF",
-        "es": "PDF"
+        "fr": "Desktroo PDF",
+        "en": "Desktroo PDF",
+        "es": "Desktroo PDF"
       },
       "tagline": {
         "fr": "Lisez, annotez et modifiez les PDF de votre NAS",
